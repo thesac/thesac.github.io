@@ -272,14 +272,21 @@ h1 small {
   display: block;
   text-transform: lowercase;
   font-size: .7em;
+  text-decoration: none;
+}
+h1 small:link, h1 small:visited {
+	text-decoration: none;
+	color:black;
 }
 h1 small:first-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 0px solid rgba(0, 0, 0, 0.25);
   padding-bottom: .5em;
 }
 h1 small:last-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
-  padding-top: .5em;
+color:black;
+border-style: solid;border-color: black;border-width: 1px 1px 1px 1px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+text-decoration: none;
 }
 
 h2 {
