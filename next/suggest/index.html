@@ -63,6 +63,13 @@
 				<center><font style="color:#000;">Gợi ý phim khác</font></center>
 			</div>
 		</a>
+		</div></br>
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToBack();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Trở lại trang chủ</font></center>
+			</div>
+		</a>
 		</div>
 		</center>
 		</br></br>
@@ -117,6 +124,15 @@ function newFilm() {
 	window.location.href = "?old_id=" + myNumber;
 }
 
+function goToBack() {
+	fadeout(document.getElementById('mainBody'),800);
+	setTimeout(goBack, 1200);
+}
+
+function goBack() {
+	window.location.href = "../index.html";
+}
+
 function tonext() {
 	window.location.href = myUrl;
 }
@@ -145,6 +161,7 @@ function loadFacebookPost(id) {
 	$.get('https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCNH.SAC%2Fposts%2F'+id+'%3A0&width=500',
 		function (response) {
 			$("#include").html(response);
+			document.getElementById('include').innerHTML = document.getElementById('include').innerHTML.replace(/\"\/CNH.SAC/g , "\"http://www.facebook.com/CNH.SAC");
 	});
 }
 	
