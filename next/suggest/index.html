@@ -3,6 +3,7 @@
 <head>
 <meta charset='UTF-8'>
 <title>The Seventh Art Club CNH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
 <meta property="og:title" content="The Seventh Art Club CNH" />
 <meta property="og:type" content="article" />
@@ -39,6 +40,8 @@
 			</div>
 		</div>
 		<center>
+		<!--iframe id="idIframe" onload="iframeLoaded()" src="http://www.facebook.com/plugins/post.php?href=http%3A%2F%2Fwww.facebook.com%2FCNH.SAC%2Fposts%2F876390312423934%3A0&width=500" width="500" style="border:none" scrolling="no" frameborder="0" allowTransparency="true"></iframe-->
+		<div id="include"></div>
 		
 		</br></br></br>
 		<div class="card__action">
@@ -51,10 +54,9 @@
 <div class="bg" id="bgView"></div>
 
 <script src='jquery.min.js'></script>
-<script src='animate_bg.js'></script>
 <script>
 myUrl = '';
-
+loadFacebookPost('876390312423934');
 	function goToPage(url) {
 		fadeout(document.getElementById('mainBody'),800);
 		myUrl = url;
@@ -75,6 +77,34 @@ myUrl = '';
            element.style.opacity -= (1/(duration/13));
        }
     },13); 
-}
+	}
+	
+	function loadFacebookPost(id) {
+		$.ajaxPrefilter( function (options) {
+		if (options.crossDomain && jQuery.support.cors) {
+			var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+			options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+			//options.url = "http://cors.corsproxy.io/url=" + options.url;
+		}
+		});
+		
+		$.get('https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCNH.SAC%2Fposts%2F'+id+'%3A0&width=500',
+			function (response) {
+				$("#include").html(response);
+		});
+	}
 </script>
+
+<script type="text/javascript">
+setTimeout(iframeLoaded, 1200);
+  function iframeLoaded() {
+      var iFrameID = document.getElementById('idIframe');
+      if(iFrameID) {
+            // here you can make the height, I delete it first, then I make it again
+            iFrameID.height = "";
+            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+            consolo.log(iFrameID.contentWindow.document.body.scrollHeight + "px");
+      }   
+  }
+</script>  
 </body></html>
