@@ -34,15 +34,42 @@
 		</br>
 		<div class="card__content card__padding_header">
 			<div class="card__article">
-				<center><b>Gợi ý phim</b></center></br>
+				<center><b style="font-size: 2.5rem;">Gợi ý phim</b></center></br>
 				<!--center id="countView"><i id="countdown"></i></center></br-->
-				<center>Hiện phần này đang được xây dựng, hãy theo dõi fanpage của chúng mình để cấp nhật thêm thông tin bạn nhé!</center></br>
+				<center>Tên phim: <b id="filmName"></b></br>
+				Nhà sản xuất: <b id="filmMaker"></b></br>
+				Đánh giá: <b id="filmRate"></b></br>
+				</center>
 			</div>
 		</div>
 		<center>
-		<!--iframe id="idIframe" onload="iframeLoaded()" src="http://www.facebook.com/plugins/post.php?href=http%3A%2F%2Fwww.facebook.com%2FCNH.SAC%2Fposts%2F876390312423934%3A0&width=500" width="500" style="border:none" scrolling="no" frameborder="0" allowTransparency="true"></iframe-->
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToReview();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Đọc review của SAC</font></center>
+			</div>
+		</a>
+		</div>
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToSearch();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Tìm bản xem online</font></center>
+			</div>
+		</a>
+		</div>
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToAnother();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Gợi ý phim khác</font></center>
+			</div>
+		</a>
+		</div>
+		</center>
+		</br></br>
+		<center>
 		<div id="include"></div>
-		
+		</center>
+		<center>
 		</br></br></br>
 		<div class="card__action">
 			<center><font style="color:#000">Designed by Nui Nui. SAC 2016</center>
@@ -54,20 +81,47 @@
 <div class="bg" id="bgView"></div>
 
 <script src='jquery.min.js'></script>
+<script src='data.js'></script>
 <script>
 myUrl = '';
-//loadFacebookPost('876390312423934');
-	function goToPage(url) {
-		fadeout(document.getElementById('mainBody'),800);
-		myUrl = url;
-		setTimeout(tonext, 1200);
-	}
-	
-	function tonext() {
-		window.location.href = myUrl;
-	}
-	
-	function fadeout ( element, duration){
+console.log(getParameterByName("old_id"));
+old_id = getParameterByName("old_id");
+myNumber = getRandomInt(0, (filmData.length - 1));
+while(old_id == myNumber) {
+	myNumber = getRandomInt(0, (filmData.length - 1));
+}
+loadFacebookPost(filmData[myNumber][3]);
+document.getElementById("filmName").innerHTML = filmData[myNumber][0];
+document.getElementById("filmMaker").innerHTML = filmData[myNumber][1];
+document.getElementById("filmRate").innerHTML = filmData[myNumber][2] + " / 5";
+function goToPage(url) {
+	fadeout(document.getElementById('mainBody'),800);
+	myUrl = url;
+	setTimeout(tonext, 1200);
+}
+
+function goToReview() {
+	OpenInNewTab('https://www.facebook.com/CNH.SAC/photos/a.807930202603279.1073741827.801613783234921/'+filmData[myNumber][3]+'/?type=3&theater');
+}
+
+function goToSearch() {
+	OpenInNewTab('http://www.google.com/search?q=xem online ' + filmData[myNumber][0]);
+}
+
+function goToAnother() {
+	fadeout(document.getElementById('mainBody'),800);
+	setTimeout(newFilm, 1200);
+}
+
+function newFilm() {
+	window.location.href = "?old_id=" + myNumber;
+}
+
+function tonext() {
+	window.location.href = myUrl;
+}
+
+function fadeout ( element, duration){
    element.style.opacity = element.style.opacity || 1;
    var inter = setInterval(function(inter){
        if( element.style.opacity <= 0 ){
@@ -77,34 +131,41 @@ myUrl = '';
            element.style.opacity -= (1/(duration/13));
        }
     },13); 
+}
+
+function loadFacebookPost(id) {
+	$.ajaxPrefilter( function (options) {
+	if (options.crossDomain && jQuery.support.cors) {
+		var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+		options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+		//options.url = "http://cors.corsproxy.io/url=" + options.url;
 	}
+	});
 	
-	function loadFacebookPost(id) {
-		$.ajaxPrefilter( function (options) {
-		if (options.crossDomain && jQuery.support.cors) {
-			var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
-			options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
-			//options.url = "http://cors.corsproxy.io/url=" + options.url;
-		}
-		});
-		
-		$.get('https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCNH.SAC%2Fposts%2F'+id+'%3A0&width=500',
-			function (response) {
-				$("#include").html(response);
-		});
-	}
+	$.get('https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCNH.SAC%2Fposts%2F'+id+'%3A0&width=500',
+		function (response) {
+			$("#include").html(response);
+	});
+}
+	
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function OpenInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+function getParameterByName(name) {
+    url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
 </script>
 
-<script type="text/javascript">
-setTimeout(iframeLoaded, 1200);
-  function iframeLoaded() {
-      var iFrameID = document.getElementById('idIframe');
-      if(iFrameID) {
-            // here you can make the height, I delete it first, then I make it again
-            iFrameID.height = "";
-            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-            consolo.log(iFrameID.contentWindow.document.body.scrollHeight + "px");
-      }   
-  }
-</script>  
 </body></html>
