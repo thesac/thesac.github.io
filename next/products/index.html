@@ -11,70 +11,85 @@
 <meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
 
 <link rel="stylesheet" class="cp-pen-styles" type="text/css" href="style.css">
-</head>
+</head><body>
+<link href="http://fonts.googleapis.com/css?family=Lato|Montserrat:700" rel="stylesheet"/>
 
-<body id="mainBody">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<center><h1></br>Các sản phẩm của SAC</h1></center>
+<center><h2>(Đang cập nhật)</h2></center>
+<div class="contact_list"></div>
+<script src='/jquery.min.js'></script>
+<script>var contact_list = (function(){
+  'use strict';
+  return {
+    _: function(el){
+      return document.querySelector(el);
+    },
+    _All: function(el){
+      return document.querySelectorAll(el);
+    },
+    show: function(){
+      this.fns();
+      this.wait();
+    },
+    fns:function(){
+      var self = this;
+      var request = new XMLHttpRequest();
+      request.open('GET','http://thesac.github.io/next/products/data.js',true);
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400){
+          // Success!
+          var data = JSON.parse(request.responseText);
+          for (var i = 0; i < data.length; i++) {
+            self.tmpl('.contact_list',data[i]);  
+          }
+        };
+      };
+      request.onerror = function(e) {
+        // There was a connection error of some sort
+        self._('.contact_list').innerHTML = '<ul class="contact_list_item"><li><h1>Sorry the request file could not loaded</h1></li></ul>';
+        
+      };
+      request.send();
+    },
+    tmpl: function(elem,obj){
 
-  ga('create', 'UA-78579525-2', 'auto');
-  ga('send', 'pageview');
+      var photo = obj.photo,
+          name = obj.name,
+          last = obj.last,
+          email = obj.email,
+          phone = obj.phone,
+          web = obj.web,
+          fb = obj.fb;
 
-</script>
-<div id="mainView" class="wrapper">
-	<div class="card radius shadowDepth1">
-		<!--div class="card__image border-tlr-radius">
-			<img 
-			src="img/logo_big.png" 
-			alt="image" class="border-tlr-radius">
-        </div-->
-		</br>
-		<div class="card__content card__padding_header">
-			<div class="card__article">
-				<center><b>The Seventh Art Club CNH</b></center></br>
-				<!--center id="countView"><i id="countdown"></i></center></br-->
-				<center>Phần này hiện đang được xây dựng. Hãy follow fanpage của chúng mình để cập nhật thêm bạn nhé!</center></br>
-			</div>
-		</div>
-		<center>
-		</br>
-		<div class="card__action">
-			<center><font style="color:#000">Designed by Nui Nui. SAC 2016</center>
-		</div>
-		</center>
-		
-	</div>
-</div>
-<div class="bg" id="bgView"></div>
+      var html = '<ul class="contact_list_item">'+
+          '<li><img class="contact_list_th" src="'+photo+'"/></li>'+
+		  '</br>'+
+          '<li><font style="font-size: 2em;"><b>'+name+'</b></font></li>'+
+          '</br>'+
+          '<li>'+last+'</li>'+
+		  '</br>'+
+          '<li>Nhà tài trợ: '+phone+'</li>'+
+          '<li>Email: '+email+'</li>'+
+          '<li>Facebook: <a href=\"'+fb+'\" target=\"_blank\">'+fb+'</a></li>'+
+          '<li>Website: <a href=\"'+web+'\" target=\"_blank\">'+web+'</a></li>'+
+          '</ul>';
 
-<script src='jquery.min.js'></script>
-<script src='animate_bg.js'></script>
-<script>
-myUrl = '';
-
-	function goToPage(url) {
-		fadeout(document.getElementById('mainBody'),800);
-		myUrl = url;
-		setTimeout(tonext, 1200);
-	}
-	
-	function tonext() {
-		window.location.href = myUrl;
-	}
-	
-	function fadeout ( element, duration){
-   element.style.opacity = element.style.opacity || 1;
-   var inter = setInterval(function(inter){
-       if( element.style.opacity <= 0 ){
-           clearInterval(inter);
-           block.style.display = "none";
-       } else {
-           element.style.opacity -= (1/(duration/13));
-       }
-    },13); 
-}
+      this._(elem).innerHTML += html;
+    },
+    wait: function(){
+      var self =  this;
+      // Wait and change position
+      var t = setInterval(function(){
+        var el = self._All('.contact_list_item');
+        for (var i = 0; i < el.length; i++) {
+          el[i].classList.add('rel');
+        }
+        clearInterval(t);
+      },1000);  
+    }
+  };
+})();
+contact_list.show();
+//# sourceURL=pen.js
 </script>
 </body></html>
