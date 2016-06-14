@@ -1,12 +1,12 @@
 [
   {  
-    "photo":"https://dl.dropboxusercontent.com/u/23834858/fotos/ALF.jpg",
+    "photo":"img/irid.jpg",
     "name":"Iridescent Prom 2016",
-    "last":"Lorem ipsum dolor sit amet, in velit iudico mandamus sit persius dolorum in per, postulant mnesarchum cu nam. Malis movet ornatus id vim, feugait detracto est ea eam eruditi conceptam in. Ne sit explicari interesset. Labores perpetua cum at. Id viris docendi denique vim.",
-    "email":"jhony@site.com",
+    "last":"Prom thường niên do SAC tổ chức. Sự kiện được thực hiện với sự giúp đỡ của hơn 40 tình nguyện viên. Đã có hơn 700 người tham dự sự kiện này tại số 81 Vũ Trọng Phụng, Hà Nội.",
+    "email":"iridescentprom2016@gmail.com",
     "phone":"1-555-222-333",
-    "fb":"http://jhonSmith.com",
-    "web":"http://jhonSmith.com"
+    "fb":"https://www.facebook.com/IridescentProm2016",
+    "web":"http://promcnh.github.io/"
   },
   {  
     "photo":"https://dl.dropboxusercontent.com/u/23834858/fotos/alice.jpg",
