@@ -1,1 +1,3 @@
-//window.location.href = (window.location.href).replace(/^https?:\/\//,'http://');
+var thisPageUrl = window.location.href;
+if (pageUrl.toLowerCase().indexOf("https") >= 0) 
+	window.location.href = pageUrl.replace("https", "http");
