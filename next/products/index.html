@@ -85,9 +85,10 @@
 		  '</br>'+
           '<li>Trưởng BTC: '+phone+'</li>'+
           '<li>Email: '+email+'</li>'+
-          '<li>Facebook: <a href=\"'+fb+'\" target=\"_blank\">'+fb+'</a></li>'+
-          '<li>Website: <a href=\"'+web+'\" target=\"_blank\">'+web+'</a></li>'+
-          '</ul>';
+          '<li>Facebook: <a href=\"'+fb+'\" target=\"_blank\">'+fb+'</a></li>';
+		  
+		if(web != "no") html += '<li>Website: <a href=\"'+web+'\" target=\"_blank\">'+web+'</a></li>';
+		html += '</ul>';
 
       this._(elem).innerHTML += html;
     },

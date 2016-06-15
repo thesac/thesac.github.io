@@ -19,7 +19,7 @@
     "email":"seventhartclub@gmail.com",
     "phone":"Vũ Quốc Việt, Ngô Thị Thục Yến",
     "fb":"https://www.facebook.com/CNH.SAC/",
-    "web":"https://www.facebook.com/CNH.SAC/"
+    "web":"no"
   },
   {  
     "photo":"img/carpe.jpg",
@@ -30,6 +30,6 @@
     "email":"seventhartclub@gmail.com",
     "phone":"Đỗ Hải Minh, Đặng Hương Giang",
 	"fb":"https://www.facebook.com/events/1443170629312880/",
-    "web":"https://www.facebook.com/events/1443170629312880/"
+    "web":"no"
   }
 ]
