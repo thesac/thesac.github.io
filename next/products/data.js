@@ -12,7 +12,7 @@
   },
   {  
     "photo":"img/top15.jpg",
-    "name":"T.O.P ( The Original Project )",
+    "name":"T.O.P (The Original Project)",
 	"date":"Từ tháng 12/2015 đến 15/1/2016",
     "last":"Dự án làm phim ngắn đã thu hút được không chỉ học sinh khối chuyên trong trường, các nhóm làm phim lẻ mà cả những đối tượng ở ngoài trường.",
 	"detail":" - Nhận được những sản phẩm được đầu tư tốt về nội dung, âm thanh cũng như kĩ thuật, thành công truyền tải ý nghĩa mà chương trình muốn hướng đến.</br> - Đã đưa được tầm ảnh hưởng của SAC ra rộng hơn, thu hút mọi người đến với câu lạc bộ.",

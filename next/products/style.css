@@ -3,11 +3,12 @@
 body {
 	font-family: 'Open Sans';
 	/*background: url(bg.jpg) no-repeat center center fixed; */
-	background: #bbb; 
+	background-color: #176653;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+	color:white;
 }
 
 /* Scroll */
@@ -50,6 +51,7 @@ body {
   display: block;
   width: 100%;
   margin: 1% auto;
+  color:black;
 }
 .contact_list .contact_list_item {
   width: 100px;
@@ -100,7 +102,6 @@ body {
   font-size: 1.2em;
   color: #000;
   opacity: 1;
-  box-shadow: 0 1px 8px #020A1A;
 }
 @media only screen and (max-width: 800px) {
   .contact_list .rel {

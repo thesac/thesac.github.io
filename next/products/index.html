@@ -11,6 +11,7 @@
 <meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
 
 <link rel="stylesheet" class="cp-pen-styles" type="text/css" href="style.css">
+<link rel="stylesheet" class="cp-pen-styles" type="text/css" href="pinwheel.css">
 </head><body>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -23,10 +24,35 @@
 
 </script>
 <link href="http://fonts.googleapis.com/css?family=Lato|Montserrat:700" rel="stylesheet"/>
+<div class="sky">
+        <div class="cloud">
+<center><h1>CÁC SẢN PHẨM CỦA</br>THE SEVENTH ART CLUB</h1></center>
+        </div>
+        <div class="cloud">
 
-<center><h1></br>Các sản phẩm của SAC</h1></center>
+        </div>
+        <div class="pinwheel">
+            <div class="pin"></div>
+            <div class="square">
+                <div class="pink"></div>
+                <div class="ice"></div>
+                <div class="teal"></div>
+                <div class="green"></div>
+            </div>
+        </div>
+           
+
+        <div class="pole"></div>
+    </div>
+</br>
+<center><font id="loading_gif">
+</br></br>
+<img src="img/loading.gif" height="100px" width="100px"></img></br>
+Loading...
+</font></center>
+
 <div class="contact_list"></div>
-<center></br><b>Designed by Nui Nui. SAC 2016</b></center>
+<center></br><b>Designed by Nui Nui. SAC 2016</b></br></center>
 <script src='/jquery.min.js'></script>
 <script>
 var elem_id = 0;
@@ -88,10 +114,10 @@ var contact_list = (function(){
 		  '<li><a onclick=\"toggle_visibility(\'post_num_'+elem_id+'\', this);return false;\" style=\"color:blue\">[Hiện chi tiết]</a></li>'+
 		  '</br>'+
           '<li>Trưởng BTC: '+phone+'</li>'+
-          '<li>Email: '+email+'</li>'+
-          '<li>Facebook: <a href=\"'+fb+'\" target=\"_blank\">'+fb+'</a></li>';
+          '<li>Email: <a style=\"word-break: break-all;\">'+email+'</a></li>'+
+          '<li>Facebook: <a href=\"'+fb+'\" target=\"_blank\" style=\"word-break: break-all;\">'+fb+'</a></li>';
 		  
-		if(web != "no") html += '<li>Website: <a href=\"'+web+'\" target=\"_blank\">'+web+'</a></li>';
+		if(web != "no") html += '<li>Website: <a href=\"'+web+'\" target=\"_blank\" style=\"word-break: break-all;\">'+web+'</a></li>';
 		html += '</ul>';
 
       this._(elem).innerHTML += html;
@@ -104,6 +130,7 @@ var contact_list = (function(){
         for (var i = 0; i < el.length; i++) {
           el[i].classList.add('rel');
         }
+		document.getElementById('loading_gif').style.display = 'none';
         clearInterval(t);
       },1000);  
     }
