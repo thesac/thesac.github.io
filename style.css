@@ -6,6 +6,12 @@
   position: relative;
 }
 
+@media screen and (max-width: 480px) {
+  svg {
+	  width:100%;
+  }
+}
+
 .illuminati {
   font-family: Raleway, Arial, Helvetica, sans-serif;
   position: absolute;
