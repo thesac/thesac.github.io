@@ -14,7 +14,6 @@ body {
 	font-weight: 400;
 	font-size: 1.6em;
 	line-height: 1.6;
-	color:white;
 }
 	
 *,
@@ -51,15 +50,14 @@ h2 {
 	height:100%;
 	width:100%;
 	/*background: url(bg.jpg) no-repeat center center fixed; */
-	background: -webkit-linear-gradient(top, #163C52 0%, #4F4F47 30%, #C5752D 60%, #B7490F 80%, #2F1107 100%);
-  background: linear-gradient(to bottom, #163C52 0%, #4F4F47 30%, #C5752D 60%, #B7490F 80%, #2F1107 100%);
+	background-color: #6B95B3;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 	padding-top: 0rem;
-	-webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
-    animation: fadein 1s;
+	-webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadein 4s;
 	margin: 0px;
 	top: 0px;
 }
@@ -111,13 +109,12 @@ box-shadow:
 */
 
 .card {
-	background-color: rgba(0,0,0,0.2);
 	margin-bottom: 1.6rem;
 	display: block;
-    -webkit-animation: fadeInFromNone 2s ease-out;
-    -moz-animation: fadeInFromNone 2s ease-out;
-    -o-animation: fadeInFromNone 2s ease-out;
-    animation: fadeInFromNone 2s ease-out;
+    -webkit-animation: fadeInFromNone 1s ease-out;
+    -moz-animation: fadeInFromNone 1s ease-out;
+    -o-animation: fadeInFromNone 1s ease-out;
+    animation: fadeInFromNone 1s ease-out;
 }
 
 .card__padding {
@@ -128,12 +125,12 @@ box-shadow:
 	padding: 1.6rem;
 	font-size: 2rem;
 	/*background-color: #B71C1C;*/
-	color: #fff;
+	color: #000;
 	display: block;
-    -webkit-animation: fadeInFromNone 2s ease-out;
-    -moz-animation: fadeInFromNone 2s ease-out;
-    -o-animation: fadeInFromNone 2s ease-out;
-    animation: fadeInFromNone 2s ease-out;
+    -webkit-animation: fadeInFromNone 1.5s ease-out;
+    -moz-animation: fadeInFromNone 1.5s ease-out;
+    -o-animation: fadeInFromNone 1.5s ease-out;
+    animation: fadeInFromNone 1.5s ease-out;
 }
 
 .card__padding_header_no {
@@ -142,26 +139,27 @@ box-shadow:
 	width: 80%;
 	transition: all 0.3s ease;
 	/*background-color: rgba(255,0,0,0.2);*/
-	color: #fff;
+	color: #000;
 	border-style: solid;
-	border-color: white;
+	border-color: black;
 	border-width: 0px 0px 0px 0px;
 	display: block;
-    -webkit-animation: fadeInFromNone 2s ease-out;
-    -moz-animation: fadeInFromNone 2s ease-out;
-    -o-animation: fadeInFromNone 2s ease-out;
-    animation: fadeInFromNone 2s ease-out;
+    -webkit-animation: fadeInFromNone 1.5s ease-out;
+    -moz-animation: fadeInFromNone 1.5s ease-out;
+    -o-animation: fadeInFromNone 1.5s ease-out;
+    animation: fadeInFromNone 1.5s ease-out;
 }
 
 .card__padding_header_red {
+	background-color: rgba(255,255,255,1);
 	padding: 1.6rem;
 	font-size: 2.4rem;
 	width: 80%;
 	transition: all 0.3s ease;
 	/*background-color: rgba(255,0,0,0.2);*/
-	color: #fff;
+	color: #000;
 	border-style: solid;
-	border-color: white;
+	border-color: black;
 	border-width: 1px 1px 1px 1px;
 	display: block;
     -webkit-animation: fadeInFromNone 2s ease-out;
@@ -184,6 +182,7 @@ box-shadow:
 }
 
 .card__padding_header_blue {
+	background-color: rgba(255,255,255,1);
 	padding: 1.6rem;
 	font-size: 2.4rem;
 	width: 80%;
@@ -191,7 +190,7 @@ box-shadow:
 	/*background-color: rgba(59,89,152,0.5);*/
 	color: #000;
 	border-style: solid;
-	border-color: white;
+	border-color: black;
 	border-width: 1px 1px 1px 1px;
 	display: block;
     -webkit-animation: fadeInFromNone 2s ease-out;
@@ -361,7 +360,7 @@ box-shadow:
 		-webkit-transform: scale(0.5);
     }
 
-    50% {
+    1% {
         display: block;
         opacity: 0;
 		-webkit-transform: scale(0.5);
@@ -381,7 +380,7 @@ box-shadow:
 		-webkit-transform: scale(0.5);
     }
 
-    50% {
+    1% {
         display: block;
         opacity: 0;
 		-webkit-transform: scale(0.5);
@@ -401,7 +400,7 @@ box-shadow:
 		-webkit-transform: scale(0.5);
     }
 
-    50% {
+    1% {
         display: block;
         opacity: 0;
 		-webkit-transform: scale(0.5);
@@ -421,7 +420,7 @@ box-shadow:
 		-webkit-transform: scale(0.5);
     }
 
-    50% {
+    1% {
         display: block;
         opacity: 0;
 		-webkit-transform: scale(0.5);

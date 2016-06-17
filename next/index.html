@@ -11,6 +11,7 @@
 <meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
 
 <link rel="stylesheet" class="cp-pen-styles" type="text/css" href="style.css">
+<link rel="stylesheet" class="cp-pen-styles" type="text/css" href="paperplane.css">
 </head>
 
 <body id="mainBody">
@@ -24,6 +25,18 @@
   ga('send', 'pageview');
 
 </script>
+<div class="frame">
+<center><b style="font-size: 3rem; color:white"></br>The Seventh Art Club CNH</b></center></br>
+<div class="plane-container">
+<a href="http://customer.io/" target="_blank">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+width="1131.53px" height="379.304px" viewBox="0 0 1131.53 379.304" enable-background="new 0 0 1131.53 379.304"
+xml:space="preserve" class="plane">
+<polygon fill="#D8D8D8" points="72.008,0 274.113,140.173 274.113,301.804 390.796,221.102 601.682,367.302 1131.53,0.223  "/>
+<polygon fill="#C4C4C3" points="1131.53,0.223 274.113,140.173 274.113,301.804 390.796,221.102   "/>
+</svg></a>
+</div>
+
 <div id="mainView" class="wrapper">
 	<div class="card radius shadowDepth1">
 		<!--div class="card__image border-tlr-radius">
@@ -34,7 +47,6 @@
 		</br>
 		<div class="card__content card__padding_header">
 			<div class="card__article">
-				<center><b style="font-size: 3rem;">The Seventh Art Club CNH</b></center></br>
 				<!--center id="countView"><i id="countdown"></i></center></br-->
 				<!--center><i>Đừng chần chừ gì nữa, hãy nhanh tay đặt vé thôi nào:</i></center></br-->
 			</div>
@@ -49,35 +61,34 @@
 		</a>
 		</div>
 		&nbsp</br-->
-		
-		<div class="card__content card__padding_header_red">
-		<a onclick="goToPage('suggest/index.html');return false;">
-			<div class="card__author">
-				<center><b style="color:#fff;">** MỚI: Gợi ý phim **</b></center>
-			</div>
-		</a>
-		</div>
-		</br>
-		<div class="card__content card__padding_header_red">
+		<div id="bookingView" class="card__content card__padding_header_red">
 		<a onclick="goToPage('top/index.html');return false;">
 			<div class="card__author">
-				<center><b style="color:#fff;">Cuộc thi The Original Project</b></center>
+				<center><b style="color:#000;">Cuộc thi The Original Project</b></center>
 			</div>
 		</a>
 		</div>
 		</br>
-		<div class="card__content card__padding_header_red">
+		<div id="bookingView" class="card__content card__padding_header_red">
+		<a onclick="goToPage('suggest/index.html');return false;">
+			<div class="card__author">
+				<center><b style="color:#000;">Gợi ý phim</b></center>
+			</div>
+		</a>
+		</div>
+		</br>
+		<div id="bookingView" class="card__content card__padding_header_red">
 		<a onclick="goToPage('products/index.html');return false;">
 			<div class="card__author">
-				<center><b style="color:#fff;">Các sản phẩm của SAC</b></center>
+				<center><b style="color:#000;">Các sản phẩm của SAC</b></center>
 			</div>
 		</a>
 		</div>
 		</br>
-		<div class="card__content card__padding_header_red">
+		<div id="bookingView" class="card__content card__padding_header_red">
 		<a onclick="goToPage('../cert/index.html');return false;">
 			<div class="card__author">
-				<center><b style="color:#fff;">Hệ thống chứng chỉ</b></center>
+				<center><b style="color:#000;">Hệ thống chứng chỉ</b></center>
 			</div>
 		</a>
 		</div>
@@ -97,7 +108,7 @@
 			</div>
 		</div-->
 		<a onclick="goToPage('https://www.facebook.com/CNH.SAC/');return false;">
-		<div class="card__content card__padding_header_red">
+		<div class="card__content card__padding_header_blue">
 			<div class="card__author">
 				<center><b>Ghé thăm Facebook Fanpage</b></center>
 			</div>
@@ -106,15 +117,56 @@
 		
 		</br></br></br>
 		<div class="card__action">
-			<center>Designed by Nui Nui. SAC 2016</center>
+			<center><b style="color:#fff">Designed by Nui Nui. SAC 2016</b></center>
 		</div>
 		</center>
 		
 	</div>
 </div>
+</div>
 <div class="bg" id="bgView">
-<img style="z-index:-10; bottom:0px; position:fixed; height:80%;" src="tree.png"/>
-<img style="z-index:110; bottom:0px; right:0px; left:0px;position:fixed; width:100%;" src="grass.png"/>
+<div class="clouds">
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud big front slowest">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant smaller">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud small slow">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud distant super-slow massive">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="762px"
+height="331px" viewBox="0 0 762 331" enable-background="new 0 0 762 331" xml:space="preserve" class="cloud slower">
+<path fill="#FFFFFF" d="M715.394,228h-16.595c0.79-5.219,1.201-10.562,1.201-16c0-58.542-47.458-106-106-106
+c-8.198,0-16.178,0.932-23.841,2.693C548.279,45.434,488.199,0,417.5,0c-84.827,0-154.374,65.401-160.98,148.529
+C245.15,143.684,232.639,141,219.5,141c-49.667,0-90.381,38.315-94.204,87H46.607C20.866,228,0,251.058,0,279.5
+S20.866,331,46.607,331h668.787C741.133,331,762,307.942,762,279.5S741.133,228,715.394,228z"/>
+</svg>
+
+</div>
 </div>
 
 <script src='jquery.min.js'></script>
