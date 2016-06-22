@@ -3,12 +3,31 @@
 body {
 	font-family: 'Open Sans';
 	/*background: url(bg.jpg) no-repeat center center fixed; */
-	background-color: #176653;
+	background-color: #fff;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 	color:white;
+}
+
+.mainView {
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadein 2s;
+	background-color: #176653;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    100%   { opacity: 1; }
 }
 
 /* Scroll */
@@ -102,10 +121,54 @@ body {
   font-size: 1.2em;
   color: #000;
   opacity: 1;
+  -webkit-animation: fadeInFromNone 1.5s; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadeInFromNone 1.5s;
 }
 @media only screen and (max-width: 800px) {
   .contact_list .rel {
     width: 80%;
     height: auto;
   }
+}
+
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+		-webkit-transform: scale(0.1);
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+		-webkit-transform: scale(0.1);
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+		-webkit-transform: scale(1);
+    }
+}
+
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+		-webkit-transform: scale(0.1);
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+		-webkit-transform: scale(0.1);
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+		-webkit-transform: scale(1);
+    }
 }

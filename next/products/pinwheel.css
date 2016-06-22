@@ -7,6 +7,16 @@ body {
   height: 100px;
   width: 100%;
 }
+.mytext {
+	text-align:center;
+}
+
+@media screen and (max-width: 600px) {
+.mytext {
+	text-align:right;
+}
+}
+
 .cloud img {
   width: 200px;
   -webkit-transition: width 2s, height 2s;

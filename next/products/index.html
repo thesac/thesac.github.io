@@ -24,9 +24,13 @@
 
 </script>
 <link href="http://fonts.googleapis.com/css?family=Lato|Montserrat:700" rel="stylesheet"/>
+<div class="mainView" id="mainBody">
+<a onclick="goToPage('..');return false;">
+	<img style="position:absolute; top:2em; left:1em" height="60px" src="ic_arrow_back.png">
+</a>
 <div class="sky">
         <div class="cloud">
-<center><h1>CÁC SẢN PHẨM CỦA</br>THE SEVENTH ART CLUB</h1></center>
+<center class="mytext" style="padding-left:3em; padding-right:1em"><h1>CÁC SẢN PHẨM CỦA</br>THE SEVENTH ART CLUB</h1></center>
         </div>
         <div class="cloud">
 
@@ -53,6 +57,7 @@ Loading...
 
 <div class="contact_list"></div>
 <center></br><b>Designed by Nui Nui. SAC 2016</b></br></center>
+</div>
 <script src='/jquery.min.js'></script>
 <script>
 var elem_id = 0;
@@ -146,6 +151,31 @@ function toggle_visibility(id, btn) {
        e.style.display = 'block';
 	   btn.innerHTML="[Ẩn chi tiết]";
 	}
+}
+</script>
+<script>
+myUrl = '';
+
+	function goToPage(url) {
+		fadeout(document.getElementById('mainBody'),800);
+		myUrl = url;
+		setTimeout(tonext, 1200);
+	}
+	
+	function tonext() {
+		window.location.href = myUrl;
+	}
+	
+	function fadeout ( element, duration){
+   element.style.opacity = element.style.opacity || 1;
+   var inter = setInterval(function(inter){
+       if( element.style.opacity <= 0 ){
+           clearInterval(inter);
+           block.style.display = "none";
+       } else {
+           element.style.opacity -= (1/(duration/13));
+       }
+    },13); 
 }
 </script>
 </body></html>
