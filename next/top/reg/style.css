@@ -119,3 +119,21 @@ img:last-of-type {
 #slide4 {
   background: #222;
 }
+
+.fbtn {
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.fbtn:hover,
+.fbtn:focus {
+box-shadow: 
+		0 3px 6px rgba(0,0,0, 0.12),
+		0 3px 6px rgba(0,0,0, 0.24);
+
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
