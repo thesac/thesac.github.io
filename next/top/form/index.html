@@ -227,15 +227,34 @@
 					this.contactForm.classList.add(classSuccess);
 					//WAIT FOR ANIMATION TO FINISH
 					this.changeHeader("Bạn đợi chút nhé...");
-					//WAIT FOR ANIMATION TO FINISH
-var message = $("#contact-form").serialize();
-$.ajax({
-        url: "//formspree.io/seventhartclub@gmail.com", 
-        method: "POST",
-        data: {message: message},
-        dataType: "json"
-    });
-
+					//WAIT FOR ANIMATION TO FINISH					
+					var okayName = this.fields.userName;
+					var okayEmail = this.fields.userEmail;
+					var okayNum = this.fields.userNum;
+					var okayLink = this.fields.userLink;
+					var okayMsg = this.fields.userMessage;
+					$.ajax({
+						url: "//docs.google.com/forms/d/1CGQkGEO8yhEkJ8_j-3-82wyIiXovhk9wfmoQGSKWD8c/formResponse",
+						data: {
+							"entry.1440421220": okayName,
+							"entry.1520027355": okayEmail,
+							"entry.1153463995": okayNum,
+							"entry.1261734897": okayLink,
+							"entry.2120875684": okayMsg
+						},
+						type: "POST",
+						dataType: "xml",
+						statusCode: {
+							0: function() {
+								//Success message
+								console.log("Success");
+							},
+							200: function() {
+								//Success Message
+								console.log("Success");
+							}
+						}
+					});
 				},
 				changeHeader: function(text) {
 					//CHANGE HEADER TEXT
