@@ -61,6 +61,18 @@ h2 {
 	top: 0px;
 }
 
+.banner {
+	background: url(banner_bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	z-index:-11;
+	box-shadow:0 1px 45px rgba(0,0,0, 1); 
+	-webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+}
+
 @keyframes fadein {
     0% { opacity: 0; }
     50% { opacity: 0; }
