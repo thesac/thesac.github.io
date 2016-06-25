@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset='UTF-8'>
+<title>The Seventh Art Club CNH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
+<meta property="og:title" content="The Seventh Art Club CNH" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://thesac.github.io/" />
+<meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<style class="cp-pen-styles">body .hero {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("http://lorempixel.com/g/1500/1000/nature/10/");
+  background-size: cover;
+  height: 170vh;
+  width: 100vw;
+}
+body .hero:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  height: 170vh;
+  width: 100vw;
+  background: rgba(44, 123, 183, 0.5);
+  position: absolute;
+}
+body .hero h1 {
+  position: relative;
+  z-index: 1;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+  max-width: 25rem;
+  margin: 15vh auto 0;
+  /*-webkit-transition: 1s opacity ease-in-out;*/
+}
+body .content {
+  position: absolute;
+  z-index: 1000;
+  top: 50vh;
+  background: #2c7b99;
+  height: 100vh;
+  width: 100vw;
+  box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+</style></head><body>
+<section class="hero">
+  <h1>SAC's Certificate System</h1>
+</section>
+
+<section class="content">
+</section>
+<script src='jquery.min.js'></script>
+<script>$(window).scroll(function (e) {
+    parallax();
+});
+function parallax() {
+    var scrolled = $(window).scrollTop();
+    $('.hero').css('top', -(scrolled * 0.0315) + 'rem');
+    $('.hero > h1').css('top', -(scrolled * -0.005) + 'rem');
+    $('.hero > h1').css('opacity', 1 - scrolled * 0.00175);
+}
+;
+//# sourceURL=pen.js
+</script>
+</body></html>
