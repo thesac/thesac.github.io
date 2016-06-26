@@ -240,12 +240,19 @@
 }());
 
 function postToGoogle() {
-var okayName = $('#name').val();
+var okayName = $('#userName').val();
 console.log(" "+okayName);
-var okayEmail = $('#email').val();
-var okayNum = $('#num').val();
-var okayLink = $('#link').val();
-var okayMsg = $('#feedback').val();
+var okayEmail = $('#userEmail').val();
+var okayNum = $('#userNum').val();
+var okayLink = $('#userLink').val();
+var okayMsg = $('#userMessage').val();
+$.ajaxPrefilter( function (options) {
+	if (options.crossDomain && jQuery.support.cors) {
+		var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+		options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+		//options.url = "http://cors.corsproxy.io/url=" + options.url;
+	}
+});
     $.ajax({
     url: "https://docs.google.com/forms/d/1CGQkGEO8yhEkJ8_j-3-82wyIiXovhk9wfmoQGSKWD8c/formResponse",
     data: {"entry.1440421220": okayName,
@@ -258,9 +265,11 @@ var okayMsg = $('#feedback').val();
     statusCode: {
         0: function() {
             //Success message
+			document.querySelector("#formHeader h1").innerHTML = "Cảm ơn bạn!";
         },
         200: function() {
             //Success Message
+			document.querySelector("#formHeader h1").innerHTML = "Cảm ơn bạn!";
         }
     }
 	});
