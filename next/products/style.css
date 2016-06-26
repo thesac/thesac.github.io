@@ -4,12 +4,12 @@ body {
 	font-family: 'Open Sans';
 	/*background: url(bg.jpg) no-repeat center center fixed; */
 	background-color: #fff;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	color:white;
-overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .mainView {
@@ -69,7 +69,7 @@ overflow-x: hidden;
 ------------------------------*/
 .contact_list {
   display: block;
-  width: 100%;
+  width: 90%;
   margin: 1% auto;
   color:black;
 }
@@ -109,13 +109,13 @@ overflow-x: hidden;
   .contact_list .contact_list_item li .contact_list_th {
     float: none;
     display: block;
-    width: 80%;
+    width: 70%;
     height: auto;
     margin-bottom: 1em;
   }
 }
 .contact_list .rel {
-  width: 60%;
+  width: 70%;
   height: 50%;
   background:white;
   padding: 2em;
