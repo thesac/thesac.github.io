@@ -20,6 +20,26 @@ h1 {
    font-size: 250%
 }
 
+h2 {
+	color: white;
+	transition: all 0.3s ease;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	padding:0.2em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h2:hover,
+h2:focus {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
 p {
   font-size: 140%;
   line-height: 150%;
@@ -118,22 +138,4 @@ img:last-of-type {
 
 #slide4 {
   background: #222;
-}
-
-.fbtn {
-	color: white;
-	transition: all 0.3s ease;
-}
-
-.fbtn:hover,
-.fbtn:focus {
-box-shadow: 
-		0 3px 6px rgba(0,0,0, 0.12),
-		0 3px 6px rgba(0,0,0, 0.24);
-
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-ms-transform: scale(1.2);
-	-o-transform: scale(1.2);
-	transform: scale(1.2);
 }

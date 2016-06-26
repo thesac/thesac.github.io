@@ -230,18 +230,18 @@
 					//WAIT FOR ANIMATION TO FINISH					
 					var okayName = $('#name').val();
 					console.log(" "+okayName);
-					var okayEmail = this.fields.userEmail;
-					var okayNum = this.fields.userNum;
-					var okayLink = this.fields.userLink;
-					var okayMsg = this.fields.userMessage;
+					var okayEmail = $('#email').val();
+					var okayNum = $('#num').val();
+					var okayLink = $('#link').val();
+					var okayMsg = $('#feedback').val();
 					$.ajax({
 						url: "//docs.google.com/forms/d/1CGQkGEO8yhEkJ8_j-3-82wyIiXovhk9wfmoQGSKWD8c/formResponse",
 						data: {
 							"entry.1440421220": okayName
-							/*"entry.1520027355": okayEmail,
+							"entry.1520027355": okayEmail,
 							"entry.1153463995": okayNum,
 							"entry.1261734897": okayLink,
-							"entry.2120875684": okayMsg*/
+							"entry.2120875684": okayMsg
 						},
 						type: "POST",
 						dataType: "xml",
