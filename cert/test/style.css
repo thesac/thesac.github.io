@@ -22,7 +22,7 @@ main {
 }
 
 header {
-  height: 60vh;
+  height: 50vh;
   width:100%;
   padding:0px;
   background: url("img/title_big.jpg");
@@ -32,8 +32,8 @@ header {
   vertical-align: top;
   -webkit-transform-origin: center top;
           transform-origin: center top;
-  -webkit-transform: translateZ(-1px) scale(2.6);
-          transform: translateZ(-1px) scale(2.6);
+  -webkit-transform: translateZ(-1px) scale(2.5);
+          transform: translateZ(-1px) scale(2.5);
 }
 
 section {
