@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class=''>
+
+<head>
+    <meta charset='UTF-8'>
+	<title>Iridescent Prom 2016 Certification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- FB Open graph tag -->
+    <meta property="og:title" content="Iridescent Prom 2016 Certification" />
+    <meta property="og:site_name" content="chuyenla" />
+
+    <meta property="og:url" content="http://iridescent.com" />
+    <meta property="og:description" content="Chào mừng bạn đã đến với Iridescent Prom 2016" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="article" />
+    <link rel="stylesheet" class="cp-pen-styles" type="text/css" href="style.css">
+    </style>
+</head>
+
+<body>
+    <main id="mainBody">
+		<a onclick="goToPage('..');return false;" style="position:absolute; top:0.5em; left:0.5em; z-index:10;">
+			<img style="" height="50px" src="ic_arrow_back.png">
+		</a>
+        <header>
+		<center style="bottom:0px; color:white; position:relative; top: 50%;left: 50%;transform: translate(-50%, -50%); background:rgba(0,0,0,0.2)"><h3>SAC's Certificate System</h3></center>
+        </header>
+        <section style="background:rgba(0,0,0,0)">
+		<!--center style="width:100%; background:rgba(0,0,0,0.5); color:white;"><h1>SAC's Iridescent Prom 2016</h1><h4>Credentials Verification</h4></center-->
+		<center style="background:#eeeeee">
+			</br>
+			<p style="text-align:left;"></br>
+				<b style="text-align:center;">ABOUT US</b></br></br>
+				<b>Iridescent Prom</b> is an annual prom held by Seventh Art Club from Nguyen Hue High School for Gifted Students. The event was run under the support of nearly 40 volunteers. Nearly 700 people joined Iridescent Prom on 28/5/2016, at Hapu Place, 81 Vu Trong Phung, Hanoi, Vietnam.</br></br>
+				<font style="width:80%; word-break: break-all;">
+				Facebook Fanpage: <a href="https://www.facebook.com/IridescentProm2016/" target="_blank">https://www.facebook.com/IridescentProm2016/</a></br>
+				Email: <a href="mailto:iridescentprom2016@gmail.com" target="_top">iridescentprom2016@gmail.com</a></br>
+				</font>
+				</br>
+            </p>
+			</br>
+			<font style="font-size: 20px;">Designed by Nui Nui. Copyright SAC 2016</font>
+            
+        </center></section>
+    </main>
+	<script src='data.js'></script>
+    <script src='jquery.min.js'></script>
+<script>
+myUrl = '';
+
+	function goToPage(url) {
+		fadeout(document.getElementById('mainBody'),800);
+		myUrl = url;
+		setTimeout(tonext, 1200);
+	}
+	
+	function tonext() {
+		window.location.href = myUrl;
+	}
+	
+	function fadeout ( element, duration){
+   element.style.opacity = element.style.opacity || 1;
+   var inter = setInterval(function(inter){
+       if( element.style.opacity <= 0 ){
+           clearInterval(inter);
+           block.style.display = "none";
+       } else {
+           element.style.opacity -= (1/(duration/13));
+       }
+    },13); 
+}
+</script>
+</body>
+
+</html>
