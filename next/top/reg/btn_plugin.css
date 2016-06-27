@@ -1,0 +1,294 @@
+.btn-bg {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn-bg.bg-1 {
+  background: #222;
+}
+.btn-bg.bg-1 .btn-1 button {
+  color: #fff;
+  background: transparent;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.btn-bg.bg-1 .btn-1 button a {
+  color: #fff;
+}
+.btn-bg.bg-1 .btn-1 button:hover {
+  background: #fff;
+  color: #000;
+  border: 3px solid #fff;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.btn-bg.bg-1 .btn-1 button:hover >a {
+  color: #000;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.btn-bg.bg-1 .btn-1 button:active {
+  -webkit-transform: translate(5px, 5px);
+  transform: translate(5px, 5px);
+}
+.btn-bg.bg-2 {
+  background: #78c98d;
+}
+.btn-bg.bg-2 .btn-2 button {
+  color: #78c98d;
+  background: #d0f9c7;
+  border: none;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.btn-bg.bg-2 .btn-2 button:hover {
+  background: transparent;
+  color: #d0f9c7;
+}
+.btn-bg.bg-2 .btn-2 button:hover:before,
+.btn-bg.bg-2 .btn-2 button:hover:after {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  width: 100%;
+}
+.btn-bg.bg-2 .btn-2 button:before,
+.btn-bg.bg-2 .btn-2 button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 0px;
+  height: 3px;
+  background: #d0f9c7;
+  transition: all 0.4s ease;
+}
+.btn-bg.bg-2 .btn-2 button:after {
+  top: inherit;
+  left: inherit;
+  bottom: 0;
+  right: 0;
+}
+.btn-bg.bg-3 {
+  background: #e5d272;
+}
+.btn-bg.bg-3 .btn-3 button {
+  color: #e5d272;
+  background: #f6f7c5;
+  border: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.btn-bg.bg-3 .btn-3 button:hover {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  background: transparent;
+  color: #f6f7c5;
+}
+.btn-bg.bg-3 .btn-3 button:hover:after {
+  transition: all 0.3s ease;
+  width: 100%;
+  left: 0;
+}
+.btn-bg.bg-3 .btn-3 button:after {
+  position: absolute;
+  transition: all 0.3s ease;
+  content: '';
+  width: 0;
+  bottom: 0;
+  left: inherit;
+  right: 0;
+  height: 3px;
+  background: #f6f7c5;
+}
+.btn-bg.bg-4 {
+  background: #ed6a5a;
+}
+.btn-bg.bg-4 .btn-4 button {
+  color: #eda39a;
+  border-radius: 5px;
+  background: radial-gradient(circle, #ed412a 0.25em, transparent 0.25em) center/1.2em 1.2em;
+  border: 3px solid #ed412a;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-bg.bg-4 .btn-4 button:hover {
+  color: #fff;
+  background: radial-gradient(circle, #ed412a 0.25em, transparent 0.25em) center/0.1em 0.1em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.btn-bg.bg-5 {
+  background: #fff;
+}
+.btn-bg.bg-5 .btn-5 h2 {
+  color: #c4c0c0;
+}
+.btn-bg.bg-5 .btn-5 button {
+  color: #c4c0c0;
+  background: transparent;
+  border: 3px solid #c4c0c0;
+  border-radius: 5px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.btn-bg.bg-5 .btn-5 button:hover {
+  border-color: #50514f;
+  color: #50514f;
+  background-image: repeating-linear-gradient(-25deg, #c4c0c0, #c4c0c0 3px, transparent 4px, transparent 7px);
+  background-size: 12px 16px;
+  -webkit-animation: cloud-animation 1.25s infinite ease;
+  animation: cloud-animation 1.25s infinite ease;
+  -webkit-animation-delay: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.btn-bg.bg-6 {
+  background: #ac7ee5;
+}
+.btn-bg.bg-6 .btn-6 button {
+  width: 11em;
+  height: 3em;
+  color: #d3b7f7;
+  background: transparent;
+  border: 3px solid #d3b7f7;
+  border-radius: 5px;
+  -webkit-transition: border 0.5s ease-out;
+  transition: border 0.5s ease-out;
+  transition-delay: 0.8s;
+}
+.btn-bg.bg-6 .btn-6 button a {
+  position: absolute;
+  z-index: 2;
+  left: 43px;
+  top: 17px;
+}
+.btn-bg.bg-6 .btn-6 button::before,
+.btn-bg.bg-6 .btn-6 button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: 'LONG NIGHT';
+  border-radius: 50%;
+  display: block;
+  width: 22em;
+  height: 22em;
+  left: -5.5em;
+  text-align: center;
+  -webkit-transition: box-shadow 0.5s ease-out;
+  transition: box-shadow 0.5s ease-out;
+  transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  z-index: 1;
+}
+.btn-bg.bg-6 .btn-6 button::after {
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
+}
+.btn-bg.bg-6 .btn-6 button:hover {
+  color: #fff;
+  border-color: #8460af;
+  animation: witch-word-color 1.5s ease;
+  -webkit-transition: border 0.2s ease;
+  transition: border 0.2s ease;
+}
+.btn-bg.bg-6 .btn-6 button:hover::before {
+  box-shadow: inset 0 0 0 11em #b657e5;
+  transition-delay: 0.05s;
+}
+.btn-bg.bg-6 .btn-6 button:hover::after {
+  box-shadow: inset 0 0 0 11em #8460af;
+  transition-delay: 0.5s;
+}
+.btn {
+  margin: 0 auto 30px auto;
+  display: block;
+}
+button {
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #fff;
+  position: relative;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 1rem 3rem 1rem 3rem;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  font-size: 1.5em;
+}
+button a {
+  text-decoration: none;
+}
+@-moz-keyframes cloud-animation {
+  100% {
+    background-position: 0px 2em;
+  }
+}
+@-webkit-keyframes cloud-animation {
+  100% {
+    background-position: 0px 2em;
+  }
+}
+@-o-keyframes cloud-animation {
+  100% {
+    background-position: 0px 2em;
+  }
+}
+@keyframes cloud-animation {
+  100% {
+    background-position: 0px 2em;
+  }
+}
+@-moz-keyframes witch-word-color {
+  0% {
+    color: #d3b7f7;
+  }
+  50% {
+    color: #50514f;
+  }
+  100% {
+    color: #fff;
+  }
+}
+@-webkit-keyframes witch-word-color {
+  0% {
+    color: #d3b7f7;
+  }
+  50% {
+    color: #50514f;
+  }
+  100% {
+    color: #fff;
+  }
+}
+@-o-keyframes witch-word-color {
+  0% {
+    color: #d3b7f7;
+  }
+  50% {
+    color: #50514f;
+  }
+  100% {
+    color: #fff;
+  }
+}
+@keyframes witch-word-color {
+  0% {
+    color: #d3b7f7;
+  }
+  50% {
+    color: #50514f;
+  }
+  100% {
+    color: #fff;
+  }
+}
