@@ -19,6 +19,8 @@ main {
           transform-style: preserve-3d;
   padding: 0 0px;
   font: 36px/1.6 "Open Sans", serif;
+  -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+  animation: fadein 4s;
 }
 
 header {
@@ -64,17 +66,24 @@ p {
 
 p:hover,
 p:focus {
-box-shadow: 
-		0 3px 6px rgba(0,0,0, 0.12),
-		0 3px 6px rgba(0,0,0, 0.24);
-
-	-webkit-transform: scale(0.95);
+	/*-webkit-transform: scale(0.95);
 	-moz-transform: scale(0.95);
 	-ms-transform: scale(0.95);
 	-o-transform: scale(0.95);
-	transform: scale(0.95);
-	background: #000;
-	color:#fff;
+	transform: scale(0.95);*/
+	background-color:#555;
+	color:white;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    100%   { opacity: 1; }
 }
 
 p.t {
