@@ -8180,6 +8180,10 @@ pre {
 .js .to-animate,
 .js .animate-box {
   opacity: 0;
+  font-size:22px;
+  color:black;
+  padding-left:4em;
+  padding-right:4em;
 }
 
 .mfp-with-zoom .mfp-container,
