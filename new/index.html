@@ -51,6 +51,7 @@
 
    <!-- Modernizr JS -->
    <script src="js/modernizr-2.6.2.min.js"></script><style type="text/css"></style>
+   <script src="/fadeout.js"></script>
    <!-- FOR IE9 below -->
    <!--[if lt IE 9]>
    <script src="js/respond.min.js"></script>
@@ -69,7 +70,7 @@
   ga('send', 'pageview');
 
 </script>
-   
+<div class="init_animate" id="mainBody"> 
    	<header id="fh5co-header" role="banner">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
@@ -82,9 +83,9 @@
 						</div>
 						<div id="fh5co-navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
-								<li class="active"><a href="/next/index.html"><span>trang chủ<span class="border"></span></span></a></l>
-								<li><a href="content/about/index.html"><span>giới thiệu<span class="border"></span></span></a></li>
-								<li><a href="../index.html"><span>liên hệ<span class="border"></span></span></a></li>
+								<li class="active"><a><span>trang chủ<span class="border"></span></span></a></li>
+								<li><a onclick="goToPage('content/about/index.html');return false;"><span>giới thiệu<span class="border"></span></span></a></li>
+								<li><a onclick="goToPage('content/contact/index.html');return false;"><span>liên hệ<span class="border"></span></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -107,7 +108,7 @@
          <div class="fh5co-projects">
             <ul>
                <li style="background-image: url(images/full1.jpg);">
-                  <a href="#">
+                  <a onclick="goToPage('content/top/index.html');return false;">
                      <div class="fh5co-overlay"></div>
                      <div class="container">
                         <div class="fh5co-text">
@@ -122,7 +123,7 @@
                   </a>
                </li>
                <li style="background-image: url(images/full2.jpg);">
-                  <a href="#">
+                  <a onclick="goToPage('#');return false;">
                      <div class="fh5co-overlay"></div>
                      <div class="container">
                         <div class="fh5co-text">
@@ -137,7 +138,7 @@
                   </a>
                </li>
                <li style="background-image: url(images/full3.jpg);">
-                  <a href="#">
+                  <a onclick="goToPage('#');return false;">
                      <div class="fh5co-overlay"></div>
                      <div class="container">
                         <div class="fh5co-text">
@@ -152,7 +153,7 @@
                   </a>
                </li>
 			   <li style="background-image: url(images/full4.jpg);">
-                  <a href="#">
+                  <a onclick="goToPage('#');return false;">
                      <div class="fh5co-overlay"></div>
                      <div class="container">
                         <div class="fh5co-text">
@@ -167,7 +168,7 @@
                   </a>
                </li>
 			   <li style="background-image: url(images/full5.jpg);">
-                  <a href="#">
+                  <a onclick="goToPage('#');return false;">
                      <div class="fh5co-overlay"></div>
                      <div class="container">
                         <div class="fh5co-text">
@@ -247,6 +248,7 @@
 
 	  
 	  </div>
+</div>
 
    <!-- END page-->
 

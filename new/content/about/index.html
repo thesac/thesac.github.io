@@ -51,6 +51,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	 <script src="/fadeout.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -58,7 +59,7 @@
 
 	</head>
 	<body>
-		
+<div class="init_animate" id="mainBody">
 	<header id="fh5co-header" role="banner">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container">
@@ -67,13 +68,13 @@
 						<div class="navbar-header"> 
 						<!-- Mobile Toggle Menu Button -->
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-						<a class="navbar-brand" href="/next/index.html">SAC</a>
+						<a class="navbar-brand" onclick="goToPage('/next/index.html');return false;">SAC</a>
 						</div>
 						<div id="fh5co-navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="/next/index.html"><span>Trang chủ <span class="border"></span></span></a></li>
-								<li class="active"><a href=""><span>Giới thiệu <span class="border"></span></span></a></li>
-								<li><a href="left-sidebar.html"><span>Liên hệ <span class="border"></span></span></a></li>
+								<li><a onclick="goToPage('/next/index.html');return false;"><span>trang chủ<span class="border"></span></span></a></li>
+								<li class="active"><a><span>giới thiệu<span class="border"></span></span></a></li>
+								<li><a onclick="goToPage('content/contact/index.html');return false;"><span>liên hệ<span class="border"></span></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -117,6 +118,7 @@
 		</div>
 
 	</div>
+</div>
 
 	<footer id="fh5co-footer">
 		<div class="container">

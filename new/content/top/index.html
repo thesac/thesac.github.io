@@ -65,12 +65,12 @@
 						<div class="navbar-header"> 
 						<!-- Mobile Toggle Menu Button -->
 						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle visible-xs-block" data-toggle="collapse" data-target="#fh5co-navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-						<a class="navbar-brand" href="index.html">SAC</a>
+						<a class="navbar-brand" onclick="goToPage('/next/index.html');return false;">SAC</a>
 						</div>
 						<div id="fh5co-navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<!--li class="active"><a href="index.html"><span>Home <span class="border"></span></span></a></li-->
-								<li><a href="../../index.html"><span>Back to home <span class="border"></span></span></a></li>
+								<li><a onclick="goToPage('/next/index.html');return false;"><span>Back to home <span class="border"></span></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -78,16 +78,13 @@
 			</div>
 		</nav>
 	</header>
-	<!-- END .header -->
-	
-	
-	<div id="fh5co-main">
+	<div id="fh5co-main" style="background-color:#8aa0c9;">
 		<div class="fh5co-intro text-center">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<h1 class="intro-lead">THE ORIGINAL PROJECT</h1>
-						<p style="color:black">by the Seventh Art Club CNH</p>
+						<h1 class="intro-lead" style="color:white">THE ORIGINAL PROJECT</h1>
+						<p style="color:white">by the Seventh Art Club CNH</p>
 					</div>
 				</div>
 			</div>
@@ -99,7 +96,7 @@
 				<div class="fh5co-portfolio-description">
 					<h2>Tuyển TNV cho dự án</h2>
 					<p>Là TNV của dự án TOP, các bạn sẽ mất đi chút ít thời gian, cộng thêm một tẹo sức lực nữa, cả sức lực về trí óc lẫn thể chất! Nhưng đừng quá lo lắng, dự án sẽ chỉ hoạt động đến cuối tháng 9 thôi. Vì vậy đừng sợ nó sẽ chiếm quá nhiều thời gian học  cũng như tiêu hao quá nhiều chất xám của của bạn nhé.</p>
-					<p><a href="#" class="btn btn-primary">Đăng ký ngay</a></p>
+					<p><a onclick="goToPage('tnv/index.html');return false;" class="btn btn-primary">Đăng ký ngay</a></p>
 				</div>
 			</div>
 			<div class="fh5co-portfolio-item fh5co-img-right">
@@ -107,7 +104,7 @@
 				<div class="fh5co-portfolio-description">
 					<h2>Youtube Channel</h2>
 					<p>Chúng mình sẽ sớm ra mắt các sản phẩm phục vụ TOP, cũng như sẽ đăng bài dự thi qua kênh youtube. Theo dõi kênh Youtube của chúng mình để cập nhật nhé! </p>
-					<p><a href="#" class="btn btn-primary">Youtube Channel</a></p>
+					<p><a href="#" class="btn btn-primary" target="_blank">Youtube Channel</a></p>
 				</div>
 			</div>
 			<div class="fh5co-portfolio-item ">
@@ -115,7 +112,7 @@
 				<div class="fh5co-portfolio-description">
 					<h2>Facebook Fanpage</h2>
 					<p></br></br></p>
-					<p><a href="#" class="btn btn-primary">Facebook Fanpage</a></p>
+					<p><a href="#" class="btn btn-primary" target="_blank">Facebook Fanpage</a></p>
 				</div>
 			</div>
 		</div>
