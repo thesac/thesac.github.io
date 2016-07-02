@@ -14,5 +14,5 @@
     "sum":"Dự án làm phim ngắn đã thu hút được không chỉ học sinh khối chuyên trong trường, các nhóm làm phim lẻ mà cả những đối tượng ở ngoài trường.",
     "leader":"Vũ Quốc Việt, Ngô Thị Thục Yến",
     "link":"no"
-  },
+  }
 ]
