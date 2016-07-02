@@ -1,0 +1,278 @@
+
+<!DOCTYPE html><html class=''>
+<head><meta charset='UTF-8'>
+<title>The Seventh Art Club CNH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
+<meta property="og:title" content="The Seventh Art Club CNH" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://thesac.github.io/" />
+<meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Raleway:400'>
+<link rel="stylesheet" class="cp-pen-styles" type="text/css" href="style.css">
+</head>
+<body>
+<!--PEN CODE-->
+</br></br></br>
+<div id="contactForm" class="contactForm">
+	<div id="formHeader" class="formHeader">
+		<h1 id="message">Đơn đăng ký dự thi TOP</h1>
+	</div>
+	<div id="formBody" class="formBody">
+		<form name="contactForm" id="contact-form" action="" method="POST">
+			Tên nhóm:
+			<div class="inputContainer">
+				<input name="name" id="userName" type="text" placeholder="Tên nhóm">
+			</div>
+			Email:
+			<div class="inputContainer">
+				<input name="email" id="userEmail" type="email" placeholder="Email liên hệ">
+			</div>
+			Số lượng thành viên:
+			<div class="inputContainer">
+				<input name="num" id="userNum" type="text" placeholder="Nhập bằng số thường, ví dụ: 4">
+			</div>
+			Link tải file video gốc:
+			<div class="inputContainer">
+				<input name="link" id="userLink" type="text" placeholder="Ví dụ link từ mediafire, google drive,...">
+			</div>
+			Mô tả ngắn gọn:
+			<div class="inputContainer">
+				<textarea style="resize: none;" name="feedback" id="userMessage" rows="10" placeholder="Mô tả ngắn gọn"></textarea>
+			</div>
+			<input id="submitBtn" class="submitBtn" type="submit" value="NỘP ĐƠN">
+		</form>
+	</div>
+</div>
+<center><p><em>NOTE: This form is for presentation only. Any form data entered is not submitted</em></p></center>
+<!--END PEN CODE-->
+<script src='jquery.min.js'></script>
+<script>(function() {
+	"use strict";
+	var //GLOBAL VARIABLES
+	input,
+			container,
+			//CSS CLASSES
+			classSuccess = "success",
+			classError = "error",
+			//FORM VALIDATOR
+			formValidator = {
+				init: function() {
+					this.cacheDom();
+					this.bindEvents();
+				},
+				cacheDom: function() {
+					//MAIN PARENT ELEMENT
+					this.contactForm = document.getElementById("contactForm");
+					//MAIN FORM ELEMENTS
+					this.formHeader = document.querySelector("#formHeader h1");
+					this.formBody = document.getElementById("formBody");
+					this.inputContainer = document.getElementsByClassName("inputContainer");
+					//USER INPUT ELEMENTS
+					//INPUT FIELDS
+					this.fields = {
+						userName: document.getElementById("userName"),
+						userEmail: document.getElementById("userEmail"),
+						userNum: document.getElementById("userNum"),
+						userLink: document.getElementById("userLink"),
+						userMessage: document.getElementById("userMessage")
+					};
+					this.submitBtn = document.getElementById("submitBtn");
+				},
+				bindEvents: function() {
+					var i;
+					//RUN RULES ON SUBMIT BUTTON CLICK
+					this.submitBtn.onclick = this.runRules.bind(this);
+					//BIND EVENTS TO EACH INPUT FIELD
+					for (i in this.fields) {
+						if (this.fields.hasOwnProperty(i)) {
+							//VARIABLES
+							input = this.fields[i];
+							container = input.parentElement;
+							//RUN RULES WHEN INPUT HAS FOCUS
+							input.onfocus = this.runRules.bind(this);
+							//RESET ERRORS WHEN CONTAINER IS CLICKED
+							container.onclick = this.resetErrors.bind(this, input);
+						}
+					}
+				},
+				runRules: function(evnt) {
+					var target = evnt.target,
+							type = evnt.type;
+					//IF EVENT ON SUBMIT BUTTON
+					if (target === this.submitBtn) {
+						//PREVENT FORM SUBMITTION
+						this.preventDefault(evnt);
+						//IF INPUT HAS FOCUS
+					} else if (type === "focus") {
+						//RESET CLASSLIST
+						this.resetClassList(target.parentElement);
+						//RESET ERRORS
+						this.resetErrors(target);
+						return false;
+					}
+					//RESET CLASSLIST
+					this.resetClassList();
+					//CHECK FIELDS
+					this.checkFields();
+				},
+				preventDefault: function(evnt) {
+					//PREVENT DEFUALT
+					evnt.preventDefault();
+				},
+				checkFields: function() {
+					var i,
+							validCount = 0,
+							//EMAIL FILTER 
+							filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/,
+							filter1 = /^([0-9_\.\-])+$/;
+					//CYLCE THROUGH INPUTS
+					for (i in this.fields) {
+						if (this.fields.hasOwnProperty(i)) {
+							input = this.fields[i];
+							//CHECK IF FIELD IS EMPTY
+							if (input.value === "") {
+								//ADD ERROR CLASS
+								this.addClass(input, classError);
+								//CHECK IF EMAIL IS VALID
+							} else if (i === "userEmail" && !filter.test(input.value)) {
+								//ADD ERROR CLASS
+								this.addClass(input, classError);
+							} else if (i === "userNum" && !filter1.test(input.value)) {
+								//ADD ERROR CLASS
+								this.addClass(input, classError);
+							} else {
+								//FIELD IS VALID
+								this.addClass(input, classSuccess);
+								validCount += 1;
+							}
+						}
+					}
+					//IF ALL FEILDS ARE VALID
+					if (validCount === 5) {
+						//SUBMIT FORM
+						this.submitForm();
+					}
+				},
+				addClass: function(input, clss) {
+					container = input.parentElement;
+					//IF INPUT HAS ERROR
+					if (clss === classError) {
+						//SHOW ERROR MESSAGE
+						this.errorMessage(input);
+					}
+					//ADD CLASS
+					input.parentElement.classList.add(clss);
+				},
+				errorMessage: function(input) {
+					var message;
+					if (input === this.fields.userName) {
+						message = "Bạn chưa nhập phần này";
+					} else if (input === this.fields.userEmail) {
+						message = "Hãy nhập chính xác email";
+					} else if (input === this.fields.userNum) {
+						message = "Nhập bằng số thường, ví dụ: 4";
+					} else if (input === this.fields.userLink) {
+						message = "Bạn chưa nhập phần này";
+					} else if (input === this.fields.userMessage) {
+						message = "Bạn chưa nhập phần này";
+					}
+					this.renderError(input, message);
+				},
+				renderError: function(input, message) {
+					var html;
+					//GET INPUT CONTAINER
+					container = input.parentElement;
+					//RENDER HTML
+					html = document.createElement("div");
+					html.setAttribute("class", "message");
+					html.innerHTML = message;
+					//IF MESSAGE ELEMENT DOESN'T EXIST
+					if (!container.getElementsByClassName("message")[0]) {
+						//INSERT MESSAGE TO INPUT CONTAINER
+						container.insertBefore(html, container.firstElementChild);
+					}
+				},
+				resetClassList: function(input) {
+					var i;
+					//IF TARGETING SPECIFIC INPUT
+					if (input) {
+						//GET INPUT CONTAINER
+						container = input.parentElement;
+						//REMOVE CLASSES
+						container.classList.remove(classError, classSuccess);
+						//FOCUS ON INPUT FIELD
+						input.focus();
+					} else {
+						for (i in this.fields) {
+							if (this.fields.hasOwnProperty(i)) {
+								//REMOVE CLASSES FROM ALL FIELDS
+								this.fields[i].parentElement.classList.remove(classError, classSuccess);
+							}
+						}
+					}
+				},
+				resetErrors: function(input) {
+					//GET INPUT CONTAINER
+					container = input.parentElement;
+					//IF CONTAINER CONTAINS ERROR
+					if (container.classList.contains(classError)) {
+						//RESET CLASSES
+						this.resetClassList(input);
+					}
+				},
+				submitForm: function() {
+					var waitForAnimation;
+					//ADD SUCCESS CLASS
+					this.contactForm.classList.add(classSuccess);
+					//WAIT FOR ANIMATION TO FINISH
+					this.changeHeader("Bạn đợi chút nhé...");
+					//WAIT FOR ANIMATION TO FINISH					
+					postToGoogle();
+				},
+				changeHeader: function(text) {
+					//CHANGE HEADER TEXT
+					this.formHeader.innerHTML = text;
+				}
+			};
+	//INITIATE FORM VALIDATOR
+	formValidator.init();
+}());
+
+function postToGoogle() {
+var okayName = $('#userName').val();
+console.log(" "+okayName);
+var okayEmail = $('#userEmail').val();
+var okayNum = $('#userNum').val();
+var okayLink = $('#userLink').val();
+var okayMsg = $('#userMessage').val();
+$.ajaxPrefilter( function (options) {
+	if (options.crossDomain && jQuery.support.cors) {
+		var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+		options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+		//options.url = "http://cors.corsproxy.io/url=" + options.url;
+	}
+});
+    $.ajax({
+    url: "https://docs.google.com/forms/d/1CGQkGEO8yhEkJ8_j-3-82wyIiXovhk9wfmoQGSKWD8c/formResponse",
+    data: {"entry.1440421220": okayName,
+			"entry.1520027355": okayEmail,
+			"entry.1153463995": okayNum,
+			"entry.1261734897": okayLink,
+			"entry.2120875684": okayMsg},
+    type: "POST",
+    dataType: "xml",
+    statusCode: {
+        0: function() {
+            //Success message
+			document.querySelector("#formHeader h1").innerHTML = "Cảm ơn bạn!";
+        },
+        200: function() {
+            //Success Message
+			document.querySelector("#formHeader h1").innerHTML = "Cảm ơn bạn!";
+        }
+    }
+	});
+}
+</script>
+</body></html>
