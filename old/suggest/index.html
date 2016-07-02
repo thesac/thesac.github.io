@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset='UTF-8'>
+<title>Gợi ý xem phim - The Seventh Art Club CNH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
+<meta property="og:title" content="Gợi ý xem phim - The Seventh Art Club CNH" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://thesac.github.io/next/suggest/index.html" />
+<meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
+
+<link rel="stylesheet" class="cp-pen-styles" type="text/css" href="style.css">
+</head>
+
+<body id="mainBody">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78579525-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="mainView" class="wrapper">
+	<div class="card radius shadowDepth1">
+		<!--div class="card__image border-tlr-radius">
+			<img 
+			src="img/logo_big.png" 
+			alt="image" class="border-tlr-radius">
+        </div-->
+		</br>
+		<div class="card__content card__padding_header">
+			<div class="card__article">
+				<center><b style="font-size: 2.5rem;">Gợi ý phim</b></center></br>
+				<!--center id="countView"><i id="countdown"></i></center></br-->
+				<center>Tên phim: <b id="filmName"></b></br>
+				Nhà sản xuất: <b id="filmMaker"></b></br>
+				Đánh giá: <b id="filmRate"></b></br>
+				</center>
+			</div>
+		</div>
+		<center>
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToReview();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Đọc review từ SAC</font></center>
+			</div>
+		</a>
+		</div></br>
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToSearch();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Tìm bản xem online</font></center>
+			</div>
+		</a>
+		</div></br>
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToAnother();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Gợi ý phim khác</font></center>
+			</div>
+		</a>
+		</div></br>
+		<div class="card__content card__padding_header_red">
+		<a onclick="goToBack();return false;">
+			<div class="card__author">
+				<center><font style="color:#000;">Trở lại trang chủ</font></center>
+			</div>
+		</a>
+		</div>
+		</center>
+		</br></br>
+		<center>
+		<div id="include"></div>
+		</center>
+		<center>
+		</br></br></br>
+		<div class="card__action">
+			<center><font style="color:#000">Designed by Nui Nui. SAC 2016</center>
+		</div>
+		</center>
+		
+	</div>
+</div>
+<div class="bg" id="bgView"></div>
+
+<script src='jquery.min.js'></script>
+<script src='data.js'></script>
+<script>
+myUrl = '';
+console.log(getParameterByName("old_id"));
+old_id = getParameterByName("old_id");
+myNumber = getRandomInt(0, (filmData.length - 1));
+while(old_id == myNumber) {
+	myNumber = getRandomInt(0, (filmData.length - 1));
+}
+loadFacebookPost(filmData[myNumber][3]);
+document.getElementById("filmName").innerHTML = filmData[myNumber][0];
+document.getElementById("filmMaker").innerHTML = filmData[myNumber][1];
+document.getElementById("filmRate").innerHTML = filmData[myNumber][2] + " / 5";
+function goToPage(url) {
+	fadeout(document.getElementById('mainBody'),800);
+	myUrl = url;
+	setTimeout(tonext, 1200);
+}
+
+function goToReview() {
+	OpenInNewTab('https://www.facebook.com/CNH.SAC/photos/a.807930202603279.1073741827.801613783234921/'+filmData[myNumber][3]+'/?type=3&theater');
+}
+
+function goToSearch() {
+	OpenInNewTab('http://www.google.com/search?q=xem online ' + filmData[myNumber][0]);
+}
+
+function goToAnother() {
+	fadeout(document.getElementById('mainBody'),800);
+	setTimeout(newFilm, 1200);
+}
+
+function newFilm() {
+	window.location.href = "?old_id=" + myNumber;
+}
+
+function goToBack() {
+	fadeout(document.getElementById('mainBody'),800);
+	setTimeout(goBack, 1200);
+}
+
+function goBack() {
+	window.location.href = "../index.html";
+}
+
+function tonext() {
+	window.location.href = myUrl;
+}
+
+function fadeout ( element, duration){
+   element.style.opacity = element.style.opacity || 1;
+   var inter = setInterval(function(inter){
+       if( element.style.opacity <= 0 ){
+           clearInterval(inter);
+           block.style.display = "none";
+       } else {
+           element.style.opacity -= (1/(duration/13));
+       }
+    },13); 
+}
+
+function loadFacebookPost(id) {
+	$.ajaxPrefilter( function (options) {
+	if (options.crossDomain && jQuery.support.cors) {
+		var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
+		options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
+		//options.url = "http://cors.corsproxy.io/url=" + options.url;
+	}
+	});
+	
+	$.get('https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FCNH.SAC%2Fposts%2F'+id+'%3A0&width=500',
+		function (response) {
+			$("#include").html(response);
+			document.getElementById('include').innerHTML = document.getElementById('include').innerHTML.replace(/\"\/CNH.SAC/g , "\"http://www.facebook.com/CNH.SAC");
+	});
+}
+	
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function OpenInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+function getParameterByName(name) {
+    url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+</script>
+
+</body></html>

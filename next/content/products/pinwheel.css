@@ -1,0 +1,153 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.cloud {
+  height: 100px;
+  width: 100%;
+}
+.mytext {
+	text-align:center;
+}
+
+@media screen and (max-width: 600px) {
+.mytext {
+	text-align:right;
+}
+}
+
+.cloud img {
+  width: 200px;
+  -webkit-transition: width 2s, height 2s;
+  transition: width 2s, height 2s;
+}
+.cloud img:hover {
+  width: 300px;
+  -webkit-transition: width 2s, height 2s;
+  transition: width 2s, height 4s;
+}
+
+.cloud:first-of-type {
+  margin-top: 35px;
+}
+.cloud:first-of-type img {
+  float: right;
+  margin-right: 130px;
+}
+
+.cloud:nth-child(2) {
+  margin-left: 100px;
+}
+
+.sky {
+  height: 360px;
+  width: 100%;
+  background-color: #0090c9;
+  overflow: hidden;
+}
+
+.grass {
+  width: 100%;
+  height: 100px;
+  background-color: #1F8A70;
+}
+
+.pinwheel,
+.square {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+}
+
+.square {
+  overflow: hidden;
+  z-index: 5;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.green, .pink, .teal, .ice {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  float: left;
+  z-index: 3;
+}
+
+.teal,
+.ice {
+  -webkit-border-top-left-radius: 25px;
+  -webkit-border-bottom-right-radius: 25px;
+  -moz-border-radius-topleft: 25px;
+  -moz-border-radius-bottomright: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.green,
+.pink {
+  -webkit-border-top-right-radius: 25px;
+  -webkit-border-bottom-left-radius: 25px;
+  -moz-border-radius-topright: 25px;
+  -moz-border-radius-bottomleft: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.pin {
+  position: absolute;
+  top: 145px;
+  left: 45px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #dbb220;
+  z-index: 10;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1.5px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.pink {
+  background-color: #D70A78;
+}
+
+.green {
+  top: 50px;
+  left: 50px;
+  background-color: #ABC549;
+}
+
+.teal {
+  top: 50px;
+  background-color: #45AEAC;
+}
+
+.ice {
+  left: 50px;
+  background-color: #CCECED;
+}
+
+.pole {
+  height: 65px;
+  width: 10px;
+  margin: 50px auto 0;
+  background-color: #412A22;
+  padding-top: 50px;
+}
