@@ -95,7 +95,8 @@
 		<div id="fh5co-portfolio" style="background-color:#eee;">
 		<div class="contact_list"></div>
 			<!--div class="fh5co-portfolio-item ">
-				<div class="fh5co-portfolio-figure animate-box" style="background-image: url(img/top15.jpg);"></div>
+				<div class="fh5co-portfolio-figure animate-box" style="background-image: url();">
+				<div class="thumbnail"><img src="img/top15.jpg" alt="Image" /></div></div>
 				<div class="fh5co-portfolio-description">
 					<h2>Tuyển TNV cho dự án</h2>
 					<p>Là TNV của dự án TOP, các bạn sẽ mất đi chút ít thời gian, cộng thêm một tẹo sức lực nữa, cả sức lực về trí óc lẫn thể chất! Nhưng đừng quá lo lắng, dự án sẽ chỉ hoạt động đến cuối tháng 9 thôi. Vì vậy đừng sợ nó sẽ chiếm quá nhiều thời gian học  cũng như tiêu hao quá nhiều chất xám của của bạn nhé.</p>
@@ -168,7 +169,8 @@ var contact_list = (function(){
 	else img_type = '<div class="fh5co-portfolio-item">';
 	
 	var html = img_type+
-		'	<div class="fh5co-portfolio-figure animate-box" style="background-image: url(img/top15.jpg);"></div>'+
+		'	<div class="fh5co-portfolio-figure">'+
+		'<div class="thumbnail"><img src="'+photo+'" alt="Image" /></div></div>'+
 		'	<div class="fh5co-portfolio-description">'+
 		'		<h2>'+name+'</h2>'+
 		'		<p>'+date+'</br>'+
@@ -206,7 +208,7 @@ var contact_list = (function(){
         }
 		//document.getElementById('loading_gif').style.display = 'none';
         clearInterval(t);
-      },1000);  
+      },2000);  
     }
   };
 })();
