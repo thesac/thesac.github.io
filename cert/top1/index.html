@@ -174,27 +174,10 @@ var contact_list = (function(){
 		'	<div class="fh5co-portfolio-description">'+
 		'		<h2>'+name+'</h2>'+
 		'		<p>'+date+'</br>'+
-		sum+'</br>Leaders: '+leader+'</p>'+
+		sum+'</br>'+leader+'</p>'+
 		'		<p><a onclick="goToPage(\''+link+'\');return false;" class="btn btn-primary">Credentials Verification</a></p>'+
 		'	</div>'+
 		'</div>';
-      /*var html = '<ul class="contact_list_item">'+
-          '<li><img class="contact_list_th" src="'+photo+'"/></li>'+
-		  '</br>'+
-          '<li><font style="font-size: 2em;"><b>'+name+'</b></font></li>'+
-		  '</br>'+
-		  '<li>Thời gian tổ chức: '+date+'</li>'+
-          '</br>'+
-          '<li>'+last+'</li>'+
-          '<li id=\"post_num_'+elem_id+'\" style=\"display:none\"></br>'+detail+'</li>'+
-		  '<li><a onclick=\"toggle_visibility(\'post_num_'+elem_id+'\', this);return false;\" style=\"color:blue\">[Hiện chi tiết]</a></li>'+
-		  '</br>'+
-          '<li>Trưởng BTC: '+phone+'</li>'+
-          '<li>Email: <a style=\"word-break: break-all;\">'+email+'</a></li>'+
-          '<li>Facebook: <a href=\"'+fb+'\" target=\"_blank\" style=\"word-break: break-all;\">'+fb+'</a></li>';
-		  
-		if(web != "no") html += '<li>Website: <a href=\"'+web+'\" target=\"_blank\" style=\"word-break: break-all;\">'+web+'</a></li>';
-		html += '</ul>';*/
 
       this._(elem).innerHTML += html;
     },
@@ -208,7 +191,7 @@ var contact_list = (function(){
         }
 		//document.getElementById('loading_gif').style.display = 'none';
         clearInterval(t);
-      },2000);  
+      },1000);  
     }
   };
 })();
