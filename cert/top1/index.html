@@ -95,7 +95,7 @@
 		<div id="fh5co-portfolio" style="background-color:#eee;">
 		<div class="contact_list"></div>
 			<!--div class="fh5co-portfolio-item ">
-				<div class="fh5co-portfolio-figure animate-box" style="background-image: url(images/1.jpg);"></div>
+				<div class="fh5co-portfolio-figure animate-box" style="background-image: url(img/top15.jpg);"></div>
 				<div class="fh5co-portfolio-description">
 					<h2>Tuyển TNV cho dự án</h2>
 					<p>Là TNV của dự án TOP, các bạn sẽ mất đi chút ít thời gian, cộng thêm một tẹo sức lực nữa, cả sức lực về trí óc lẫn thể chất! Nhưng đừng quá lo lắng, dự án sẽ chỉ hoạt động đến cuối tháng 9 thôi. Vì vậy đừng sợ nó sẽ chiếm quá nhiều thời gian học  cũng như tiêu hao quá nhiều chất xám của của bạn nhé.</p>
@@ -159,7 +159,7 @@ var contact_list = (function(){
       var photo = obj.photo,
           name = obj.name,
           date = obj.date,
-          summ = obj.sum,
+          sum = obj.sum,
           leader = obj.leader,
           link = obj.link;
 		  
@@ -168,12 +168,12 @@ var contact_list = (function(){
 	else img_type = '<div class="fh5co-portfolio-item">';
 	
 	var html = img_type+
-		'	<div class="fh5co-portfolio-figure animate-box" style="background-image: url(images/1.jpg);"></div>'+
+		'	<div class="fh5co-portfolio-figure animate-box" style="background-image: url(img/top15.jpg);"></div>'+
 		'	<div class="fh5co-portfolio-description">'+
 		'		<h2>'+name+'</h2>'+
 		'		<p>'+date+'</br>'+
-		summ+'</br>Leaders: '+leader+'</p>'+
-		'		<p><a onclick="goToPage(\''+link+'\');return false;" class="btn btn-primary">Đăng ký ngay</a></p>'+
+		sum+'</br>Leaders: '+leader+'</p>'+
+		'		<p><a onclick="goToPage(\''+link+'\');return false;" class="btn btn-primary">Credentials Verification</a></p>'+
 		'	</div>'+
 		'</div>';
       /*var html = '<ul class="contact_list_item">'+
@@ -204,7 +204,7 @@ var contact_list = (function(){
         for (var i = 0; i < el.length; i++) {
           el[i].classList.add('rel');
         }
-		document.getElementById('loading_gif').style.display = 'none';
+		//document.getElementById('loading_gif').style.display = 'none';
         clearInterval(t);
       },1000);  
     }
