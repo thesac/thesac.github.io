@@ -1,1 +1,80 @@
-<h1> This site is being built. </h1>
+<!DOCTYPE html>
+<html class=''>
+
+<head>
+    <meta charset='UTF-8'>
+	<title>The Orignal Project - SAC Certificate System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
+
+    <!-- FB Open graph tag -->
+    <meta property="og:title" content="The Orignal Project - SAC Certificate System" />
+
+    <meta property="og:url" content="http://thesac.github.io/cert/top/index.html" />
+    <meta property="og:description" content="SAC Certificate System" />
+    <meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
+    <link rel="stylesheet" class="cp-pen-styles" type="text/css" href="style.css">
+    </style>
+</head>
+
+<body>
+<!--font style="bottom:0px; position:fixed; top: 50%;left: 50%;transform: translate(-50%, -50%); font-family:'Open Sans';"><h2>Loading...</h2></font-->
+    <main id="mainBody">
+		<a onclick="goToPage('..');return false;" style="position:absolute; top:0.5em; left:0.5em; z-index:10;">
+			<img style="" height="50px" src="ic_arrow_back.png">
+		</a>
+        <header>
+        </header>
+        <section style="background:rgba(0,0,0,0)">
+			<center style="width:100%; background:rgba(0,0,0,0.5); color:white; padding:0.5em"><h2>The Orignal Project</h2></center>
+		<center style="background:#eeeeee">
+			</br>
+			<!--p style="text-align:left;">
+				<img class="eventLogo" src="http://thesac.github.io/next/products/img/irid.jpg" />
+				<b style="text-align:center;">Iridescent Prom</b></br></br>
+				<b>Iridescent Prom</b> is an annual prom held by Seventh Art Club from Nguyen Hue High School for Gifted Students. The event was run under the support of nearly 40 volunteers. Nearly 700 people joined Iridescent Prom on 28/5/2016, at Hapu Place, 81 Vu Trong Phung, Hanoi, Vietnam.</br></br>
+				<font style="width:80%; word-break: break-all;">
+				Facebook Fanpage: <a href="https://www.facebook.com/IridescentProm2016/" target="_blank">https://www.facebook.com/IridescentProm2016/</a></br>
+				Email: <a href="mailto:iridescentprom2016@gmail.com" target="_top">iridescentprom2016@gmail.com</a></br>
+				</font>
+            </p-->
+			This page is being built.
+			</br>
+			</br>
+			</br>
+			</br>
+			</br>
+			<font style="font-size: 20px;">Designed by Nui Nui. Copyright SAC 2016</font>
+            
+        </center></section>
+    </main>
+	<script src='data.js'></script>
+    <script src='jquery.min.js'></script>
+<script>
+myUrl = '';
+
+	function goToPage(url) {
+		fadeout(document.getElementById('mainBody'),800);
+		myUrl = url;
+		setTimeout(tonext, 1200);
+	}
+	
+	function tonext() {
+		window.location.href = myUrl;
+	}
+	
+	function fadeout ( element, duration){
+   element.style.opacity = element.style.opacity || 1;
+   var inter = setInterval(function(inter){
+       if( element.style.opacity <= 0 ){
+           clearInterval(inter);
+           block.style.display = "none";
+       } else {
+           element.style.opacity -= (1/(duration/13));
+       }
+    },13); 
+}
+</script>
+</body>
+
+</html>
