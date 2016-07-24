@@ -68,13 +68,14 @@
 	font-weight: 300;
     font-size: 1.8em;
     text-align: center;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, .6);
   }
   
   .button-line {
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    background: transparent;
+    background: rgba(0,0,0,0.1);
     border: 1px solid #fff;
     color: #fff;
     text-align: center;
@@ -88,7 +89,7 @@
   }
   
   .button-line:hover {
-    opacity: 1;
+	background: rgba(0,0,0,0.5);
   }
   
   .showiframe {
@@ -154,7 +155,7 @@ loaded = false;
 	function hidelanding() {
 		document.getElementById('btntxt').height="0%";
 		document.getElementById('btntxt').width="0%";
-		document.getElementById('btntxt').opacity="0";
+		document.getElementById('btntxt').display="none";
 		document.getElementById('btntxt').innerHTML="T.O.P";
 		document.getElementById('title1').innerHTML="Xin chờ...";
 		document.getElementById('title2').innerHTML="";
