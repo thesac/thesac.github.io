@@ -257,7 +257,7 @@ body {
     <div class='dot'></div>
   </div>
 </div>
-<iframe id="myiframe" class="myiframe" src="https://docs.google.com/forms/d/e/1FAIpQLSfJSX0EBPmdC3tB7ag855CI8xkE3rWjf2XdizRMbyIqhIiv-g/viewform?embedded=true" style="position:fixed; top:0px; left:0px; width:0%; height:0%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Loading...</iframe>
+<iframe id="myiframe" class="myiframe" style="position:fixed; top:0px; left:0px; width:0%; height:0%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; background:white;"></iframe>
 <script src='/jquery.min.js'></script>
 <script>$(document).ready(function () {
     load();
@@ -266,12 +266,10 @@ function load() {
     setTimeout(function () {
         $('.loaderContainer').addClass('load');
     }, 500);
-    document.getElementById('myiframe').onload = function () {
       setTimeout(function () {  
 		$('.loaderContainer').removeClass('load');
         removeOverlay();
-	},1000);
-    }
+	},3000);
 }
 function removeOverlay() {
     $('.overlay').fadeOut('slow');
@@ -283,7 +281,8 @@ $('.replay').on('click', function () {
 		$('.myiframe').show();
 		setTimeout(function () {
 			$('.text').hide();
-		}, 2000);
+			window.location = "https://docs.google.com/forms/d/1SeGR0UZgmyuUmQXuBrqEkuNwWXAxXMH3u9Ol_BrkXwA/viewform";
+		}, 1000);
 });
 //# sourceURL=pen.js
 </script>
