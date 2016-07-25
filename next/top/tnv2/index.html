@@ -134,23 +134,24 @@
   </div>
 </div>
 
-<iframe id="myiframe" class="myiframe" src="https://docs.google.com/forms/d/1SeGR0UZgmyuUmQXuBrqEkuNwWXAxXMH3u9Ol_BrkXwA/viewform?embedded=true" style="position:fixed; top:0px; left:0px; width:0%; height:0%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Loading...</iframe>
+<!--iframe id="myiframe" class="myiframe" src="https://docs.google.com/forms/d/1SeGR0UZgmyuUmQXuBrqEkuNwWXAxXMH3u9Ol_BrkXwA/viewform?embedded=true" style="position:fixed; top:0px; left:0px; width:0%; height:0%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Loading...</iframe-->
 
 <script src='/jquery.min.js'></script>
 <script>
 loaded = false;
 	function goToNext() {
-		document.getElementById('myiframe').style.height= '100%';
+		/*document.getElementById('myiframe').style.height= '100%';
 		document.getElementById('myiframe').style.width= '100%';
 		$('.myiframe').attr('class', 'showiframe');
 		$('.myiframe').show();
-		setTimeout(hidelanding, 2100);
+		setTimeout(hidelanding, 2100);*/
+		window.location = "https://docs.google.com/forms/d/1SeGR0UZgmyuUmQXuBrqEkuNwWXAxXMH3u9Ol_BrkXwA/viewform";
 	}
 	
-	document.getElementById('myiframe').onload = function() {
+	//document.getElementById('myiframe').onload = function() {
         if(loaded == false) document.getElementById('btntxt').innerHTML = "Yesss";
 		loaded = true;
-    }
+    //}
 	
 	function hidelanding() {
 		document.getElementById('btntxt').height="0%";
