@@ -1,0 +1,295 @@
+
+<!DOCTYPE html><html class=''>
+<head>
+<meta charset='UTF-8'>
+<title>Tuyển thành viên show truyền hình thực tế - The Seventh Art Club CNH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
+<meta property="og:title" content="Tuyển thành viên show truyền hình thực tế" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://thesac.github.io/form/brain2/" />
+<meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+<style class="cp-pen-styles">
+body {
+  margin: 0px;
+  height: 100vh;
+  background-image: url("background.svg");
+  font-family: 'Open Sans';
+  color: #fff;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+.text {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+}
+
+.text h1 {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.text h2 {
+  font-weight: lighter;
+}
+.text span {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+  display: block;
+  font-size: 30px;
+  font-weight: lighter;
+  color: #fff;
+}
+.text span:hover {
+  opacity: .8;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.loaderContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+.loaderContainer.load {
+  -webkit-animation: load 2s 0.8s linear infinite;
+          animation: load 2s 0.8s linear infinite;
+}
+.loaderContainer.load .dot {
+  opacity: 1;
+}
+.loaderContainer.load .crs {
+  opacity: 1;
+}
+.loaderContainer.load .crs.topr {
+  -webkit-transform: translate(50%, -150%);
+          transform: translate(50%, -150%);
+}
+.loaderContainer.load .crs.topl {
+  -webkit-transform: translate(-150%, -150%);
+          transform: translate(-150%, -150%);
+}
+.loaderContainer.load .crs.botr {
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+}
+.loaderContainer.load .crs.botl {
+  -webkit-transform: translate(-150%, 50%);
+          transform: translate(-150%, 50%);
+}
+.loaderContainer .dot {
+  height: 10px;
+  width: 10px;
+  background-color: #01172d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity .2s ease .4s;
+  transition: opacity .2s ease .4s;
+  opacity: 0;
+}
+.loaderContainer .crs {
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-color: #01172d;
+  border-width: 10px 10px 0px 0px;
+  position: absolute;
+  -webkit-transition: all 0.6s cubic-bezier(1, 0, 0.215, 1);
+  transition: all 0.6s cubic-bezier(1, 0, 0.215, 1);
+}
+.loaderContainer .crs.topr {
+  -webkit-transform: translate(20vw, -20vh);
+          transform: translate(20vw, -20vh);
+}
+.loaderContainer .crs.topl {
+  border-width: 10px 0px 0px 10px;
+  -webkit-transform: translate(-20vw, -20vh);
+          transform: translate(-20vw, -20vh);
+}
+.loaderContainer .crs.botr {
+  border-width: 0px 10px 10px 0px;
+  -webkit-transform: translate(20vw, 20vh);
+          transform: translate(20vw, 20vh);
+}
+.loaderContainer .crs.botl {
+  border-width: 0px 0px 10px 10px;
+  -webkit-transform: translate(-20vw, 20vh);
+          transform: translate(-20vw, 20vh);
+}
+
+@-webkit-keyframes load {
+  12.5% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  37.5% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  62.5% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  87.5% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  12.5% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  37.5% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  62.5% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  87.5% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+  .showiframe {
+	-webkit-animation: fadein 1s cubic-bezier(0.3,1,0,1); /* Safari, Chrome and Opera > 12.1 */
+	animation: fadein 1s cubic-bezier(0.3,1,0,1);
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: cubic-bezier(0.3,1,0,1);
+	position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;
+}
+
+@keyframes fadein {
+    0% { transform: translate(0vw, 100vh); }
+    100%   { transform: translate(0vw, 0vh); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    0% { -webkit-transform: translate(0vw, 100vh);	}
+    100%   { -webkit-transform: translate(0vw, 0vh); }
+}
+</style></head><body>
+<script src='/ga.js'></script>
+<div class='text'>
+  <h1>
+    <font style="font-weight:normal;">tuyển thành viên</font></br>
+    show truyền hình thực tế
+  </h1>
+  <h2>
+    Chương trình dự kiến sẽ có 13 tập.
+  </h2>
+  <h2>
+    Bạn đã sẵn sàng chưa?
+  </h2>
+  <span class='replay'>
+    Tiếp tục
+  </span>
+</div>
+<div class='overlay'>
+  <div class='loaderContainer'>
+    <div class='crs topr'></div>
+    <div class='crs topl'></div>
+    <div class='crs botr'></div>
+    <div class='crs botl'></div>
+    <div class='dot'></div>
+  </div>
+</div>
+<div id="myiframe" class="myiframe" style="position:fixed; top:0px; left:0px; width:0%; height:0%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; background:#993026;"><center><h1></br></br>Xin chờ...</h1></center></div>
+<script src='/jquery.min.js'></script>
+<script>$(document).ready(function () {
+    load();
+});
+function load() {
+    setTimeout(function () {
+        $('.loaderContainer').addClass('load');
+    }, 500);
+      setTimeout(function () {  
+		$('.loaderContainer').removeClass('load');
+        removeOverlay();
+	},2800);
+}
+function removeOverlay() {
+    $('.overlay').fadeOut('slow');
+}
+$('.replay').on('click', function () {
+    document.getElementById('myiframe').style.height= '100%';
+		document.getElementById('myiframe').style.width= '100%';
+		$('.myiframe').attr('class', 'showiframe');
+		$('.myiframe').show();
+		setTimeout(function () {
+			$('.text').hide();
+			window.location = "https://docs.google.com/forms/d/e/1FAIpQLSejACOAktjsEBzhfRfxL5j96CeR2uf_vOKcgJAHXToJtw5Psw/viewform";
+		}, 1000);
+});
+//# sourceURL=pen.js
+</script>
+</body></html>
