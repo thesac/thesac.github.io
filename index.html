@@ -20,7 +20,6 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
-		<script src="/fadeout.js"></script>
 		<script src="js/init.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -28,18 +27,38 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 		<style>
+.animatesac {
+	-webkit-animation: fadein 1s cubic-bezier(0.3,1,0,1);
+	animation: fadein 3s cubic-bezier(0.3,1,0,1);
+	-webkit-animation-name: fadein;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: cubic-bezier(0.3,1,0,1);
+}
+		
+@keyframes fadein {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    100%   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    100%   { opacity: 1; }
+}
 		</style>
 	</head>
-	<body id="top">
+	<body id="mainBody">
 <script src="/ga.js"></script>
-<span class="animatesac" id="mainBody">
+<div class="animatesac">
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
 				<h1><a href="#">SAC</a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="/next/index.html">Trang chủ SAC</a></li>
-						<li><a href="/next/content/about/index.html">Giới thiệu</a></li>
+						<li><a onclick="goToPage('/next/index.html');return false;">Trang chủ SAC</a></li>
+						<li><a onclick="goToPage('/next/content/about/index.html');return false;">Giới thiệu</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -51,8 +70,8 @@
 					<p>Tổ chức bởi <a>the Seventh Art Club (SAC)</a></br>
 					THPT chuyên Nguyễn Huệ</p>
 					<ul class="actions">
-						<li><a href="/next/content/top/index.html" class="button big special">CHI TIẾT THÊM</a></li>
-						<li><a href="/next/index.html" class="button big alt">TRANG CHỦ SAC</a></li>
+						<li><a onclick="goToPage('/next/content/top/index.html');return false;" class="button big special">CHI TIẾT THÊM</a></li>
+						<li><a onclick="goToPage('/next/index.html');return false;" class="button big alt">TRANG CHỦ SAC</a></li>
 					</ul>
 				</div>
 			</section>
@@ -73,7 +92,7 @@
 								<h3>the Seventh Art Club</br>(SAC)</h3>
 								<p>Thành lập bởi học sinh trường THPT chuyên Nguyễn Huệ, câu lạc bộ nghệ thuật thứ bảy (SAC) đã trở thành ngôi nhà chung của những người yêu phim, kịch,...</p>
 								</font>
-								<a href="/next/index.html" class="button big special">Trang chủ của CLB</a>
+								<a onclick="goToPage('/next/index.html');return false;" class="button big special">Trang chủ của CLB</a>
 							</section>
 						</div>
 					</div>
@@ -156,6 +175,7 @@
 					</ul>
 				</div>
 			</footer>
-</span>
+</div>
 	</body>
+<script src="/fadeout.js"></script>
 </html>
