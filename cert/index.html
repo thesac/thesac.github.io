@@ -34,8 +34,8 @@ cover: logo1.jpg
 <link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
 <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="{{ page.url }}" />
-<meta property="og:image" content="{% if page.cover %}{{ page.cover | prepend: page.url }}{% else %}{{ site.cover }}{% endif %}" />
+<meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+<meta property="og:image" content="{% if page.cover %}{{ page.cover | prepend: page.url | prepend: site.url }}{% else %}{{ site.cover }}{% endif %}" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
