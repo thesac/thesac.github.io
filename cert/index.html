@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Certificate System - The Seventh Art Club CNH
+title: Certificate System
 cover: logo1.jpg
 ---
 
@@ -29,13 +29,13 @@ cover: logo1.jpg
 	 -->
 
   <!-- Facebook and Twitter integration -->
-<title>Certificate System - The Seventh Art Club CNH</title>
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="icon" href="http://thesac.github.io/img/small_logo.jpg">
-<meta property="og:title" content="Certificate System - The Seventh Art Club CNH" />
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="{{ page.url }}" />
-<meta property="og:image" content="http://thesac.github.io/img/big_logo.jpg" />
+<meta property="og:image" content="{% if page.cover %}{{ page.cover | prepend: page.url }}{% else %}{{ site.cover }}{% endif %}" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">

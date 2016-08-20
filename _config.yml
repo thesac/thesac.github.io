@@ -4,3 +4,4 @@ relative_permalinks: false
 permalink: /404.html
 markdown: kramdown
 highlighter: rouge
+cover: "http://thesac.github.io/img/big_logo.jpg"
