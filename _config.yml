@@ -2,3 +2,5 @@ title: The CNH's Seventh Art Club
 url: "http://thesac.github.io"
 relative_permalinks: false
 permalink: /404.html
+markdown: kramdown
+highlighter: rouge
