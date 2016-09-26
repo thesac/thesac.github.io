@@ -73,7 +73,7 @@
 						</div>
 						<div id="fh5co-navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
-								<li class="active"><a><span>trang chủ<span class="border"></span></span></a></li>
+								<li><a onclick="goToPage('/next/index.html');return false;"><span>trang chủ<span class="border"></span></span></a></li>
 								<li><a onclick="goToPage('/next/content/about/index.html');return false;"><span>giới thiệu<span class="border"></span></span></a></li>
 								<li><a onclick="goToPage('/next/content/contact/index.html');return false;"><span>liên hệ<span class="border"></span></span></a></li>
 							</ul>
@@ -85,19 +85,27 @@
 	</header>
       <div class="fh5co-blog-style-1">
          <div class="container">
+		<div class="fh5co-intro text-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1 class="intro-lead" style="font-size:32px;">The Original Project</h1>
+						<h1 class="intro-lead">Kết quả bình chọn</h1></br>
+						<p>Cập nhật ngày <font id="timenow"></font></p>
+					</div>
+				</div>
+			</div>
+		</div>
+                  
             <div class="row p-b">
-               <div class="col-md-6 col-md-offset-3 text-center">
-                  <h2 class="fh5co-heading">Kết quả bình chọn T.O.P</h2>
-                  <p>Cập nhật ngày <font id="timenow"></font></p>
-               </div>
-            </div>
-            <div class="row p-b">
-               <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+               <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
                   <div class="fh5co-post">
+					<a id="topimgl_1" target="_blank">
                      <div class="fh5co-post-image">
                         <div class="fh5co-overlay"></div>   
                         <img id="topimg_1" class="img-responsive">
                      </div>
+					</a>
                      <div class="fh5co-post-text">
                         <h3 id="toptitle_1">Team</h3>
                         <p style="color:black"><font id="topdetail_1">Details</font></br></br>
@@ -115,12 +123,14 @@
                      </div></a>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+               <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
                   <div class="fh5co-post">
+                     <a id="topimgl_2" target="_blank">
                      <div class="fh5co-post-image">
                         <div class="fh5co-overlay"></div>   
                         <img id="topimg_2" class="img-responsive">
                      </div>
+					</a>
                      <div class="fh5co-post-text">
                         <h3 id="toptitle_2">Team</h3>
                         <p style="color:black"><font id="topdetail_2">Details</font></br></br>
@@ -138,32 +148,31 @@
                      </div></a>
                   </div>
                </div>
-               <div class="clearfix visible-sm-block"></div>
-               <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+               <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12">
                   <div class="fh5co-post">
+                    <a id="topimgl_3" target="_blank">
                      <div class="fh5co-post-image">
                         <div class="fh5co-overlay"></div>   
-                        <img id="topimg_1" class="img-responsive">
+                        <img id="topimg_3" class="img-responsive">
                      </div>
+					</a>
                      <div class="fh5co-post-text">
-                        <h3 id="toptitle_1">Nhóm 1:sdagsđ</h3>
-                        <p style="color:black" id="topdetail_1">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts...</br></br>
-						<i class="icon-facebook"></i>&nbsp <font id="topfb_1">Loading</font></br>
-                        <i class="icon-youtube"></i>&nbsp <font id="topyt_1">Loading</font></br>
-						<b>Tổng điểm = <font id="topscore_1">Loading</font></b></p>
+                        <h3 id="toptitle_3">Team</h3>
+                        <p style="color:black"><font id="topdetail_3">Details</font></br></br>
+						<i class="icon-facebook"></i>&nbsp <font id="topfb_3">Loading</font></br>
+                        <i class="icon-youtube"></i>&nbsp <font id="topyt_3">Loading</font></br>
+						<b>Tổng điểm = <font id="topscore_3">Loading</font></b></p>
                      </div>
-					 <a id="topytl_1">
+					 <a id="topytl_3" target="_blank">
                      <div class="fh5co-post-meta" style="color:black">
                         Xem trên Youtube
                      </div></a>
-					 <a id="topfbl_1">
+					 <a id="topfbl_3" target="_blank">
 					 <div class="fh5co-post-meta" style="color:black">
                         Xem post facebook
                      </div></a>
                   </div>
                </div>
-               <div class="clearfix visible-sm-block"></div>
-            </div>
             <!--div class="row">
                <div class="col-md-4 col-md-offset-4 text-center">
                   <a href="#" class="btn btn-primary btn-lg">View All Post</a>

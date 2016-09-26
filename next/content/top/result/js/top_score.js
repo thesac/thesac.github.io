@@ -1,10 +1,20 @@
 var postData = [null,
-["name","description","snWh7W23LdI","1808871722730718_1811028209181736","images/full1.jpg",-1]];
+["name","description","snWh7W23LdI",
+	"1808871722730718_1811028209181736","images/full1.jpg",-1],
+["Nhóm 2: The Illumination","<b>- Điều có thể -</b></br>Bạn có tin vào ĐỊNH MỆNH không? Câu nói ấy đã thôi thúc chúng tôi làm nên bộ phim này. Một bộ phim về tình người với tình yêu đồng giới , tình yêu nam nữ nà tình phụ tử thiêng liêng . \"Trên thế giới này , mọi điều không thể đều có thể xảy ra\" . Câu nói ấy đã gắn kết Thanh và Linh , cũng chinh câu nói ấy đã làm Luật dao động. Và cuối cùng , Thanh đã... ","snWh7W23LdI",
+	"1808871722730718_1811028209181736","team/2.jpg",-1],
+["Nhóm 3: APA ","<b>- Nắng -</b></br>Bộ phim xoay quay về tình cảm con người và những gì sâu kín nhất trong lòng thủ đô","snWh7W23LdI",
+	"1808871722730718_1811028209181736","team/3.jpg",-1],
+["Nhóm 4: Ngắn gọn thôi","<b>- Hà nội cô đơn -</b></br>Bộ phim xoay quay về tình cảm con người và những gì sâu kín nhất trong lòng thủ đô","snWh7W23LdI",
+	"1808871722730718_1811028209181736","team/3.jpg",-1]];
 
 initTop(1);
+initTop(2);
+initTop(3);
 
 function initTop(pid) {
 	var msyt = -1,msfbshare = -1,msfblike = -1,mscore = -1;
+	var imgl = document.getElementById('topimgl_'+pid);
 	var img = document.getElementById('topimg_'+pid);
 	var syt = document.getElementById('topyt_'+pid);
 	var sfb = document.getElementById('topfb_'+pid);
@@ -19,6 +29,7 @@ function initTop(pid) {
 	//get post data
 	ytlink.href = 'https://www.youtube.com/video/'+postData[pid][2];
 	fblink.href = 'https://www.facebook.com/'+postData[pid][3];
+	imgl.href = 'https://www.facebook.com/'+postData[pid][3];
 	title.innerHTML = postData[pid][0];
 	detail.innerHTML = postData[pid][1];
 	img.src = postData[pid][4];
