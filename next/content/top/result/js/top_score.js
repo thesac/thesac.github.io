@@ -14,9 +14,18 @@ var postData = [null,
 ["Nhóm 13: Maverick","<b>-  -</b></br>","","","",-1]
 ];
 
+var numOfTeams = 14;
+
 var i;
-for(i=1 ; i < 14 ; i++) {
+for(i=1 ; i < numOfTeams ; i++) {
 	initTop(i);
+}
+
+function updateTop() {
+	int j;
+	for(j=1 ; j < numOfTeams ; j++) {
+		
+	}
 }
 
 
