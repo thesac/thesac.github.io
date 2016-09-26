@@ -22,10 +22,44 @@ for(i=1 ; i < numOfTeams ; i++) {
 }
 
 function updateTop() {
-	int j;
+	var j;
+	var ok = true;
 	for(j=1 ; j < numOfTeams ; j++) {
-		
+		if(postData[j][5] == -1) ok = false;
 	}
+	if(ok) {
+		getTop();
+	}
+}
+
+function getTop() {
+	var j;
+	var a,b,c;
+	var x,y,z;
+	a = 0;
+	b = 0;
+	c = 0;
+	for(j=1 ; j < numOfTeams ; j++) {
+		if(postData[j][5] > a) {
+			a = postData[j][5];
+			x = j;
+		}
+	}
+	for(j=1 ; j < numOfTeams ; j++) {
+		if(postData[j][5] > b && postData[j][5] != a) {
+			b = postData[j][5];
+			y = j;
+		}
+	}
+	for(j=1 ; j < numOfTeams ; j++) {
+		if(postData[j][5] > c && postData[j][5] != b && postData[j][5] != a) {
+			c = postData[j][5];
+			z = j;
+		}
+	}
+	var toptop1 = document.getElementById('toptop1'); toptop1.innerHTML = postData[x][0];
+	var toptop2 = document.getElementById('toptop2'); toptop2.innerHTML = postData[y][0];
+	var toptop3 = document.getElementById('toptop3'); toptop3.innerHTML = postData[z][0];
 }
 
 
