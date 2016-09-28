@@ -104,7 +104,7 @@ function initTop(pid) {
     });
 	
 	//facebook
-	$.getJSON('https://graph.facebook.com/v2.7/'+idfb+'?access_token=EAAIZBAcdXlxYBAHoI9hZC72DEuY6TJ0P8CoOlo3QjUdBSql292ZCfufYTnHlLwuww9vQWUgFXV0vDmu9HiQ6MNWJNitJPa7bVsh7rRwxfTP6ZCXkGCJEHoWEqMh0PVjpb0OUOGvNDkx1LMrh030UX9gzYkPCcIYyuuoJKvma1QZDZD&fields=reactions.summary(true)%2Cshares&format=json&method=get&pretty=0', function(data) {
+	$.getJSON('https://graph.facebook.com/v2.7/'+idfb+'?access_token=EAACEdEose0cBAOBj4dxD3tZA6ZC9ybrpa2YQ3IGsZC2zo6brYOuLmZBlYh8DZBXRZAd2KegzKCXDzFlU0fuR8dS2h1sybkGluqpbIHk7pxY1gtF4OXNjBh3MQmoEPVvYHtPj4WUDpAO0zwjc1wHUWm08h3bTZAs8VPQYIQm9jifCAZDZD&fields=reactions.summary(true)%2Cshares&format=json&method=get&pretty=0', function(data) {
         msfblike = +(data.reactions.summary.total_count);
         msfbshare = +(data.shares.count);
 		mscore = msyt+msfblike*2+msfbshare*3;
