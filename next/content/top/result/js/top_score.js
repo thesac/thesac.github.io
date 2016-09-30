@@ -92,7 +92,8 @@ function initTop(pid) {
 		mscore = msyt+msfblike*2+msfbshare*3;
 		syt.innerHTML = msyt + ' likes';
 		if ((msyt != -1) && (msfblike != -1) && (msfbshare != -1)) {
-			score.innerHTML = mscore + ' điểm';
+			//score.innerHTML = mscore + ' điểm';
+			score.innerHTML = '---';
 			postData[pid][5] = mscore;
 			console.log("Team"+pid+
 					" yt="+msyt+
@@ -110,7 +111,8 @@ function initTop(pid) {
 		mscore = msyt+msfblike*2+msfbshare*3;
 		sfb.innerHTML = msfblike + ' likes+reactions,' + msfbshare + ' shares';
 		if ((msyt != -1) && (msfblike != -1) && (msfbshare != -1)) {
-			score.innerHTML = mscore + ' điểm';
+			//score.innerHTML = mscore + ' điểm';
+			score.innerHTML = '---';
 			postData[pid][5] = mscore;
 			console.log("Team"+pid+
 					" yt="+msyt+
