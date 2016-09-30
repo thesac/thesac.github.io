@@ -34,7 +34,7 @@ function updateTop() {
 }
 
 function getTop() {
-	var j;
+	/*var j;
 	var a,b,c;
 	var x,y,z;
 	a = 0;
@@ -60,7 +60,7 @@ function getTop() {
 	}
 	var toptop1 = document.getElementById('toptop1'); toptop1.innerHTML = "1. "+postData[x][0] +": " + postData[x][5] +" điểm";
 	var toptop2 = document.getElementById('toptop2'); toptop2.innerHTML = "2. "+postData[y][0] +": " + postData[y][5] +" điểm";
-	var toptop3 = document.getElementById('toptop3'); toptop3.innerHTML = "3. "+postData[z][0] +": " + postData[z][5] +" điểm";
+	var toptop3 = document.getElementById('toptop3'); toptop3.innerHTML = "3. "+postData[z][0] +": " + postData[z][5] +" điểm";*/
 }
 
 
