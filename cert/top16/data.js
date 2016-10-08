@@ -29,7 +29,6 @@ function verifyMe() {
 }
 
 function showInfo() {
-	//document.getElementById('codeinput').style.display = "none";
 	$("#codeinput").animate({
         opacity: '0',
         height: '0px'
@@ -44,6 +43,7 @@ function showInfo() {
 			document.getElementById('cert_email').innerHTML = myData[myNum][3];
 		document.getElementById('cert_pos').innerHTML = myData[myNum][2];
 		document.getElementById('cert_code').innerHTML = myData[myNum][0];
+		document.getElementById('onlineCopyLink').href = "online_copy/cert_" + (myNum+1) + ".jpg";
 	} else {
 		document.getElementById('personCert').style.display = "none";
 		var awarded;
@@ -52,12 +52,12 @@ function showInfo() {
 		else
 			awarded = myData[myNum][3];
 		document.getElementById('teamCertContent').innerHTML =
-			"<b>== TEAM "+myData[myNum][4]+": "+myData[myNum][1]+" ==</b></br>"+
+			myData[myNum][1]+"</br>"+
 			myData[myNum][2]+"</br>"+
-			"Awarded: "+awarded+"</br>";
+			"<b>Awarded: </b>"+awarded+"</br>";
+		document.getElementById('teamFilmLink').href = "https://www.youtube.com/video/"+myData[myNum][5];
 		document.getElementById('teamInfoLink').href = "";
 	}
-	document.getElementById('onlineCopyLink').href = "online_copy/cert_" + (myNum+1) + ".jpg";
 }
 
 function resetInput() {
@@ -119,18 +119,18 @@ var myData=[
 ["hun8","Vũ Đức Anh","a volunteer of the Logistics Team","vuducanh987@gmail.com","15 Aug 2001",""],
 ["bd3w","Vũ Hoàng Anh","a volunteer of the Communication Team","vuhoanganh2211@gmail.com","22 Nov 2000",""],
 ["4snc","Vũ Thùy Linh","a volunteer of the Finance Team","littlelilyvl@gmail.com","12 Jul 1999",""],
-["9zw8","Súc Sích Production","Short film: To Cyra","FIRST PRIZE","10","x"],
-["ekzp","The Illumination","Short film: Điều có thể","SECOND PRIZE","2","x"],
-["1mb6","K.Y.S","Short film: Nhẹ tựa nỗi đau","THIRD PRIZE","6","x"],
-["en1v","Trần Huyền Trân","Short film: To Cyra","BEST ACTRESS","10","x"],
-["c9k7","Maverick","Short film: Hành trình kiêu hãnh","CREATIVE CONTENT","13","x"],
-["9wpq","SIPTEAM","Short film: Nắng phía chân cầu","MOST FAVOURITE FILM","7","x"],
-["ckn2","T.B.Đ Team","Short film: The Letter","","1","x"],
-["h1d9","A PDP Production Film","Short film: Nắng","","3","x"],
-["k1gf","Ngắn gọn thôi","Short film: Hà Nội cô đơn","","4","x"],
-["4scc","SHALLT MTAND","Short film: Người tốt","","5","x"],
-["tyb6","A1 k41 KL","Short film: Sống là cho đi","","8","x"],
-["756c","THE RET TEAM","Short film: A better me","","9","x"],
-["32h1","K&C Team","Short film: Friends","","11","x"],
-["ags8","SONDER GROUP","Short film: Giấy","","12","x"]
+["ckn2","<b>== TEAM 1: T.B.Đ Team ==</b>","<b>Short film: </b> The Letter","","1","x"],
+["ekzp","<b>== TEAM 2: The Illumination ==</b>","<b>Short film: </b> Điều có thể","SECOND PRIZE","2","i2eEmw9UsQ8"],
+["h1d9","<b>== TEAM 3: A PDP Production Film ==</b>","<b>Short film: </b> Nắng","","3","rNS0m1JRvJc"],
+["k1gf","<b>== TEAM 4: Ngắn gọn thôi ==</b>","<b>Short film: </b> Hà Nội cô đơn","","4","ldMU7zfcp8g"],
+["4scc","<b>== TEAM 5: SHALLT MTAND ==</b>","<b>Short film: </b> Người tốt","","5","QQyd2lIBRxQ"],
+["1mb6","<b>== TEAM 6: K.Y.S ==</b>","<b>Short film: </b> Nhẹ tựa nỗi đau","THIRD PRIZE","6","9IBQHdUGFnU"],
+["9wpq","<b>== TEAM 7: SIPTEAM ==</b>","<b>Short film: </b> Nắng phía chân cầu","MOST FAVOURITE FILM","7","SrWImBW3VCs"],
+["tyb6","<b>== TEAM 8: A1 k41 KL ==</b>","<b>Short film: </b> Sống là cho đi","","8","ie6ly9v0DLE"],
+["756c","<b>== TEAM 9: THE RET TEAM ==</b>","<b>Short film: </b> A better me","","9","QBbZFw1G9hA"],
+["9zw8","<b>== TEAM 10: Súc Sích Production ==</b>","<b>Short film: </b> To Cyra","FIRST PRIZE","10","QD9cpZ8YCdw"],
+["en1v","<b>== Trần Huyền Trân - From TEAM 10 ==</b>","<b>Short film: </b> To Cyra","BEST ACTRESS","10_2","QD9cpZ8YCdw"],
+["32h1","<b>== TEAM 11: K&C Team ==</b>","<b>Short film: </b> Friends","","11","vgu1UdgVzLA"],
+["ags8","<b>== TEAM 12: SONDER GROUP ==</b>","<b>Short film: </b> Giấy","","12","nCdk2Bi7HvM"],
+["c9k7","<b>== TEAM 13: Maverick ==</b>","<b>Short film: </b> Hành trình kiêu hãnh","CREATIVE CONTENT","13","4YDUWDBj0Hg"]
 ];
