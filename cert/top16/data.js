@@ -57,6 +57,7 @@ function showInfo() {
 			"<b>Awarded: </b>"+awarded+"</br>";
 		document.getElementById('teamFilmLink').href = "https://www.youtube.com/video/"+myData[myNum][5];
 		document.getElementById('teamInfoLink').href = "";
+		document.getElementById('onlineCopyLink').href = "online_copy/team/" + (myNum+1) + ".jpg";
 	}
 }
 
