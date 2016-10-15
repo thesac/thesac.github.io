@@ -117,7 +117,7 @@ var myData=[
 ["9cwq","PHẠM PHƯƠNG LINH","a member of the Communication Team","phamphuonglinh0609@gmail.com","6 Sep 2000","","",""],
 ["9upb","PHẠM PHƯƠNG THẢO","a volunteer of the Logistics Team","Phamphuongthao2305@gmail.com","23 May 1999","","",""],
 ["guse","PHẠM QUỲNH PHƯƠNG","a volunteer of the Logistics Team","quynhphuongmomo@gmail.com","1 Jul 2000","","",""],
-["06yk","TIÊU THÙY LINH","a volunteer of the Communication Team","","15 Jan 2000","","",""],
+["06yk","TIÊU THÙY LINH","a volunteer of the Finance Team","","15 Jan 2000","","",""],
 ["ksxb","TRẦN ĐÀO QUANG HUY","a volunteer of the Logistics Team","","17 May 1999","","",""],
 ["ytdb","TRẦN NGỌC ÁNH","a volunteer of the Communication Team","ngocanh27299@gmail.com","27 Feb 1999","","",""],
 ["stup","TRẦN PHƯƠNG NGA","a volunteer of the Logistics Team","tranphuongnga2001@gmail.com","8 Nov 2001","","",""],
