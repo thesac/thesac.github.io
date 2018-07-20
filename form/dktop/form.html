@@ -335,7 +335,6 @@
 
 		var tennhom, daidien, danhsach, email, facebook, sdt = "";
 		var camket = false;
-		var posted = false;
 
 		//submit
 		function submitform(token) {
@@ -354,13 +353,14 @@
 				(facebook == "") ||
 				(sdt == "")) {
 				alert("Lỗi: Bạn còn chỗ để trống kìa!");
+				grecaptcha.reset();
 			} else {
 				if (camket == true) {
 					//alert("okay");
-					if (posted == false) postmyform(token);
-					posted = true;
+					postmyform(token);
 				} else {
 					alert("Bạn chưa tick vào ô CAM KẾT");
+					grecaptcha.reset();
 				}
 			}
 		}
@@ -387,15 +387,17 @@
 				type: "POST",
 				success: function(result) {
 					if (typeof result == "string")
-						result = JSON.parse(result)
+						result = JSON.parse(result);
 						
 					if (result.success)
-						successpost()
+						successpost();
 						
-					if (result.error)
-						alert("Lỗi: "+result.mesage)
-						
-					isloading = false;
+					if (result.error) {
+						alert("Lỗi: "+result.mesage);
+						grecaptcha.reset();
+						document.getElementById("myBtn").innerHTML = "Thử lại";
+						isloading = false;
+					}
 				}
 			});
 		}
