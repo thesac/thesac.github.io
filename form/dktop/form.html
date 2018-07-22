@@ -225,7 +225,7 @@
 </head>
 
 <body>
-	<h1> Đơn đăng ký dự thi T.O.P 2018
+	<h1 style="background: #f9cb70"> Đơn đăng ký dự thi T.O.P 2018
 		<small>by The Seventh Art Club</small>
 	</h1>
 	<section class="contact-wrap">
@@ -404,7 +404,8 @@
 
 		function successpost() {
 			document.getElementById("myBtn").innerHTML = "Thành công!";
-			posted = true;
+			window.location = "success.html";
+			/*posted = true;
 			document.getElementById('myiframe').style.height = '100%';
 			document.getElementById('myiframe').style.width = '100%';
 			$('.myiframe').attr('class', 'showiframe');
@@ -412,7 +413,7 @@
 			setTimeout(function() {
 				$('.text').hide();
 				window.location = "success.html";
-			}, 1000);
+			}, 1000);*/
 		}
 	</script>
 </body>
